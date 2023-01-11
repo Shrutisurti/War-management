@@ -5,12 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>WAR-Managetask</title>
-  <!-- 1.Owl carousel min.js -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-  <!-- 2.Owl carousel Theme min.css -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.1/css/dataTables.bootstrap5.min.css">
+    <link rel="stylesheet" href="./datatable.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -178,9 +175,8 @@
       <!-- ==================Row1======================= -->
 <div class="task-report-box">
       <div class="row ">
-       
         <div class="col-md-12 pt-3">
-            <div class="row">
+             <div class="row">
               <div class="col-md-3">
                 <div class="task-report-selector">
                 <label for="employee">Employee:</label>
@@ -226,276 +222,524 @@
               </div>
               </div>
               
-            </div>
-            <div class="row">
-              <div class="d-flex justify-content-end mt-4">
-                <label for="search">Search:</label>
-                <input type="text" id="search" name="search" class="search-box">
-              </div>
-            </div>
-        </div>
-   
-        <div class="col-md-12">
-            <div class="row">
-            <div class="col-md-12">
-                <table class="table">
-                    <thead>
-                      <tr>
-                        <th>Date</th>
-                        <th>AssignBy</th>
-                        <th>Task</th>
-                        <th>Bonus</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      
-                      <tr class="first-row">
-                      
-                        <td><p >2022-11-21</p></td>
-                        <td><p >Siddharth Pandipautra</p></td>
-                        <td>
-                            Misc
-                            <p class="task-detail text-muted">shopify tutorials,techneplus (application service page model),nilaya legal site setup</p>
-                          <div class="d-flex">
-                         <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off">
-                         <label class="btn btn-radio-green" for="btnradio1">Green</label>
+             </div>
+             <div class="row pt-3">
+              <div class="col-md-12">
+                <table  id="warreporttable" class="table">
+                      <thead>
+                        <tr>
+                          <th>Date</th>
+                          <th>AssignBy</th>
+                          <th>Task</th>
+                          <th>Bonus</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        
+                        <tr class="first-row">
+                        
+                          <td><p >2022-11-21</p></td>
+                          <td><p >Siddharth Pandipautra</p></td>
+                          <td>
+                              Misc
+                              <p class="task-detail text-muted">shopify tutorials,techneplus (application service page model),nilaya legal site setup</p>
+                            <div class="d-flex">
+                           <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off">
+                           <label class="btn btn-radio-green" for="btnradio1">Green</label>
+                         
+                           <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
+                           <label class="btn btn-radio-yellow" for="btnradio2">Yellow</label>
+                         
+                           <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
+                           <label class="btn btn-radio-red" for="btnradio3">Red</label>
+  
+                              <input type="radio" class="btn-check" name="btnradio" id="btnradio4" autocomplete="off">
+                           <label class="btn btn-radio-none" for="btnradio4">Not Done</label>
+                         </div>
+                          </td>
+                          <td class="checkbox-col">
+                              <input type="checkbox" id="bonus" name="bonus" value="bonus">
+                          </td>
+                        </tr>
                        
-                         <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
-                         <label class="btn btn-radio-yellow" for="btnradio2">Yellow</label>
-                       
-                         <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
-                         <label class="btn btn-radio-red" for="btnradio3">Red</label>
-
-                            <input type="radio" class="btn-check" name="btnradio" id="btnradio4" autocomplete="off">
-                         <label class="btn btn-radio-none" for="btnradio4">Not Done</label>
-                       </div>
-                        </td>
-                        <td class="checkbox-col">
-                            <input type="checkbox" id="bonus" name="bonus" value="bonus">
-                        </td>
-                      </tr>
-                     
-
-                      <tr class="first-row">
-                        <td><p>2022-11-21</p></td>
-                        <td><p>Siddharth Pandipautra</p></td>
-                        <td>Misc
+  
+                        <tr class="first-row">
+                          <td><p>2022-11-21</p></td>
+                          <td><p>Siddharth Pandipautra</p></td>
+                          <td>Misc
+                              <p class="task-detail text-muted">shopify tutorials,techneplus (application service page model),nilaya legal site setup</p>
+                              <div class="d-flex">
+                                <input type="radio" class="btn-check" name="radio" id="radio1" autocomplete="off">
+                                <label class="btn btn-radio-green" for="radio1">Green</label>
+                              
+                                <input type="radio" class="btn-check" name="radio" id="radio2" autocomplete="off">
+                                <label class="btn btn-radio-yellow" for="radio2">Yellow</label>
+                              
+                                <input type="radio" class="btn-check" name="radio" id="radio3" autocomplete="off">
+                                <label class="btn btn-radio-red" for="radio3">Red</label>
+  
+                                   <input type="radio" class="btn-check " name="radio" id="radio4" autocomplete="off">
+                                <label class="btn btn-radio-none" for="radio4">Not Done</label>
+                              </div>
+                          </td>
+                          <td class="checkbox-col">
+                              <input type="checkbox" id="bonus" name="bonus" value="bonus">
+                          </td>
+                        </tr>
+  
+                        <tr class="first-row">
+                          <td><p>2022-11-21</p></td>
+                          <td><p>Siddharth Pandipautra</p></td>
+                          <td>Misc
                             <p class="task-detail text-muted">shopify tutorials,techneplus (application service page model),nilaya legal site setup</p>
                             <div class="d-flex">
-                              <input type="radio" class="btn-check" name="radio" id="radio1" autocomplete="off">
-                              <label class="btn btn-radio-green" for="radio1">Green</label>
+                              <input type="radio" class="btn-check" name="radiobtn" id="radiobtn1" autocomplete="off">
+                              <label class="btn btn-radio-green" for="radiobtn1">Green</label>
                             
-                              <input type="radio" class="btn-check" name="radio" id="radio2" autocomplete="off">
-                              <label class="btn btn-radio-yellow" for="radio2">Yellow</label>
+                              <input type="radio" class="btn-check" name="radiobtn" id="radiobtn2" autocomplete="off">
+                              <label class="btn btn-radio-yellow" for="radiobtn2">Yellow</label>
                             
-                              <input type="radio" class="btn-check" name="radio" id="radio3" autocomplete="off">
-                              <label class="btn btn-radio-red" for="radio3">Red</label>
-
-                                 <input type="radio" class="btn-check " name="radio" id="radio4" autocomplete="off">
-                              <label class="btn btn-radio-none" for="radio4">Not Done</label>
+                              <input type="radio" class="btn-check" name="radiobtn" id="radiobtn3" autocomplete="off">
+                              <label class="btn btn-radio-red" for="radiobtn3">Red</label>
+  
+                                 <input type="radio" class="btn-check" name="radiobtn" id="radiobtn4" autocomplete="off">
+                              <label class="btn btn-radio-none" for="radiobtn4">Not Done</label>
                             </div>
-                        </td>
-                        <td class="checkbox-col">
-                            <input type="checkbox" id="bonus" name="bonus" value="bonus">
-                        </td>
-                      </tr>
-
-                      <tr class="first-row">
-                        <td><p>2022-11-21</p></td>
-                        <td><p>Siddharth Pandipautra</p></td>
-                        <td>Misc
-                          <p class="task-detail text-muted">shopify tutorials,techneplus (application service page model),nilaya legal site setup</p>
-                          <div class="d-flex">
-                            <input type="radio" class="btn-check" name="radiobtn" id="radiobtn1" autocomplete="off">
-                            <label class="btn btn-radio-green" for="radiobtn1">Green</label>
-                          
-                            <input type="radio" class="btn-check" name="radiobtn" id="radiobtn2" autocomplete="off">
-                            <label class="btn btn-radio-yellow" for="radiobtn2">Yellow</label>
-                          
-                            <input type="radio" class="btn-check" name="radiobtn" id="radiobtn3" autocomplete="off">
-                            <label class="btn btn-radio-red" for="radiobtn3">Red</label>
-
-                               <input type="radio" class="btn-check" name="radiobtn" id="radiobtn4" autocomplete="off">
-                            <label class="btn btn-radio-none" for="radiobtn4">Not Done</label>
-                          </div>
-                        </td>
-                        <td class="checkbox-col">
-                            <input type="checkbox" id="bonus" name="bonus" value="bonus">
-                        </td>
-                      </tr>
-                      <tr class="first-row">
-                        <td><p>2022-11-21</p></td>
-                        <td><p>Siddharth Pandipautra</p></td>
-                        <td>Misc
-                          <p class="task-detail text-muted">shopify tutorials,techneplus (application service page model),nilaya legal site setup</p>
-                          <div class="d-flex">
-                            <input type="radio" class="btn-check" name="button" id="button1" autocomplete="off">
-                            <label class="btn btn-radio-green" for="button1">Green</label>
-                          
-                            <input type="radio" class="btn-check" name="button" id="button2" autocomplete="off">
-                            <label class="btn btn-radio-yellow" for="button2">Yellow</label>
-                          
-                            <input type="radio" class="btn-check" name="button" id="button3" autocomplete="off">
-                            <label class="btn btn-radio-red" for="button3">Red</label>
-
-                               <input type="radio" class="btn-check" name="button" id="button4" autocomplete="off">
-                            <label class="btn btn-radio-none" for="button4">Not Done</label>
-                          </div>
-                        </td>
-                        <td class="checkbox-col">
-                            <input type="checkbox" id="bonus" name="bonus" value="bonus">
-                        </td>
-                      </tr>
-                      <tr class="first-row">
-                        <td><p>2022-11-21</p></td>
-                        <td><p>Siddharth Pandipautra</p></td>
-                        <td>Misc
-                          <p class="task-detail text-muted">shopify tutorials,techneplus (application service page model),nilaya legal site setup</p>
-                          <div class="d-flex">
-                            <input type="radio" class="btn-check" name="btnr" id="btnr1" autocomplete="off">
-                            <label class="btn btn-radio-green" for="btnr1">Green</label>
-                          
-                            <input type="radio" class="btn-check" name="btnr" id="btnr2" autocomplete="off">
-                            <label class="btn btn-radio-yellow" for="btnr2">Yellow</label>
-                          
-                            <input type="radio" class="btn-check" name="btnr" id="btnr3" autocomplete="off">
-                            <label class="btn btn-radio-red" for="btnr3">Red</label>
-
-                               <input type="radio" class="btn-check" name="btnr" id="btnr4" autocomplete="off">
-                            <label class="btn btn-radio-none" for="btnr4">Not Done</label>
-                          </div>
-                        </td>
-                        <td class="checkbox-col">
-                            <input type="checkbox" id="bonus" name="bonus" value="bonus">
-                        </td>
-                      </tr>
-                      <tr class="first-row">
-                        <td><p>2022-11-21</p></td>
-                        <td><p>Siddharth Pandipautra</p></td>
-                        <td>Misc
-                          <p class="task-detail text-muted">shopify tutorials,techneplus (application service page model),nilaya legal site setup</p>
-                          <div class="d-flex">
-                            <input type="radio" class="btn-check" name="btnrad" id="btnrad1" autocomplete="off">
-                            <label class="btn btn-radio-green" for="btnrad1">Green</label>
-                          
-                            <input type="radio" class="btn-check" name="btnrad" id="btnrad2" autocomplete="off">
-                            <label class="btn btn-radio-yellow" for="btnrad2">Yellow</label>
-                          
-                            <input type="radio" class="btn-check" name="btnrad" id="btnrad3" autocomplete="off">
-                            <label class="btn btn-radio-red" for="btnrad3">Red</label>
-
-                               <input type="radio" class="btn-check" name="btnrad" id="btnrad4" autocomplete="off">
-                            <label class="btn btn-radio-none" for="btnrad4">Not Done</label>
-                          </div>
-                        </td>
-                        <td class="checkbox-col">
-                            <input type="checkbox" id="bonus" name="bonus" value="bonus">
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
+                          </td>
+                          <td class="checkbox-col">
+                              <input type="checkbox" id="bonus" name="bonus" value="bonus">
+                          </td>
+                        </tr>
+                        <tr class="first-row">
+                          <td><p>2022-11-21</p></td>
+                          <td><p>Siddharth Pandipautra</p></td>
+                          <td>Misc
+                            <p class="task-detail text-muted">shopify tutorials,techneplus (application service page model),nilaya legal site setup</p>
+                            <div class="d-flex">
+                              <input type="radio" class="btn-check" name="button" id="button1" autocomplete="off">
+                              <label class="btn btn-radio-green" for="button1">Green</label>
+                            
+                              <input type="radio" class="btn-check" name="button" id="button2" autocomplete="off">
+                              <label class="btn btn-radio-yellow" for="button2">Yellow</label>
+                            
+                              <input type="radio" class="btn-check" name="button" id="button3" autocomplete="off">
+                              <label class="btn btn-radio-red" for="button3">Red</label>
+  
+                                 <input type="radio" class="btn-check" name="button" id="button4" autocomplete="off">
+                              <label class="btn btn-radio-none" for="button4">Not Done</label>
+                            </div>
+                          </td>
+                          <td class="checkbox-col">
+                              <input type="checkbox" id="bonus" name="bonus" value="bonus">
+                          </td>
+                        </tr>
+                        <tr class="first-row">
+                          <td><p>2022-11-21</p></td>
+                          <td><p>Siddharth Pandipautra</p></td>
+                          <td>Misc
+                            <p class="task-detail text-muted">shopify tutorials,techneplus (application service page model),nilaya legal site setup</p>
+                            <div class="d-flex">
+                              <input type="radio" class="btn-check" name="btnr" id="btnr1" autocomplete="off">
+                              <label class="btn btn-radio-green" for="btnr1">Green</label>
+                            
+                              <input type="radio" class="btn-check" name="btnr" id="btnr2" autocomplete="off">
+                              <label class="btn btn-radio-yellow" for="btnr2">Yellow</label>
+                            
+                              <input type="radio" class="btn-check" name="btnr" id="btnr3" autocomplete="off">
+                              <label class="btn btn-radio-red" for="btnr3">Red</label>
+  
+                                 <input type="radio" class="btn-check" name="btnr" id="btnr4" autocomplete="off">
+                              <label class="btn btn-radio-none" for="btnr4">Not Done</label>
+                            </div>
+                          </td>
+                          <td class="checkbox-col">
+                              <input type="checkbox" id="bonus" name="bonus" value="bonus">
+                          </td>
+                        </tr>
+                        <tr class="first-row">
+                          <td><p>2022-11-21</p></td>
+                          <td><p>Siddharth Pandipautra</p></td>
+                          <td>Misc
+                            <p class="task-detail text-muted">shopify tutorials,techneplus (application service page model),nilaya legal site setup</p>
+                            <div class="d-flex">
+                              <input type="radio" class="btn-check" name="btnrad" id="btnrad1" autocomplete="off">
+                              <label class="btn btn-radio-green" for="btnrad1">Green</label>
+                            
+                              <input type="radio" class="btn-check" name="btnrad" id="btnrad2" autocomplete="off">
+                              <label class="btn btn-radio-yellow" for="btnrad2">Yellow</label>
+                            
+                              <input type="radio" class="btn-check" name="btnrad" id="btnrad3" autocomplete="off">
+                              <label class="btn btn-radio-red" for="btnrad3">Red</label>
+  
+                                 <input type="radio" class="btn-check" name="btnrad" id="btnrad4" autocomplete="off">
+                              <label class="btn btn-radio-none" for="btnrad4">Not Done</label>
+                            </div>
+                          </td>
+                          <td class="checkbox-col">
+                              <input type="checkbox" id="bonus" name="bonus" value="bonus">
+                          </td>
+                        </tr>
+                        <tr class="first-row">
+                        
+                          <td><p >2022-11-21</p></td>
+                          <td><p >Siddharth Pandipautra</p></td>
+                          <td>
+                              Misc
+                              <p class="task-detail text-muted">shopify tutorials,techneplus (application service page model),nilaya legal site setup</p>
+                            <div class="d-flex">
+                           <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off">
+                           <label class="btn btn-radio-green" for="btnradio1">Green</label>
+                         
+                           <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
+                           <label class="btn btn-radio-yellow" for="btnradio2">Yellow</label>
+                         
+                           <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
+                           <label class="btn btn-radio-red" for="btnradio3">Red</label>
+  
+                              <input type="radio" class="btn-check" name="btnradio" id="btnradio4" autocomplete="off">
+                           <label class="btn btn-radio-none" for="btnradio4">Not Done</label>
+                         </div>
+                          </td>
+                          <td class="checkbox-col">
+                              <input type="checkbox" id="bonus" name="bonus" value="bonus">
+                          </td>
+                        </tr>
+                       
+  
+                        <tr class="first-row">
+                          <td><p>2022-11-21</p></td>
+                          <td><p>Siddharth Pandipautra</p></td>
+                          <td>Misc
+                              <p class="task-detail text-muted">shopify tutorials,techneplus (application service page model),nilaya legal site setup</p>
+                              <div class="d-flex">
+                                <input type="radio" class="btn-check" name="radio" id="radio1" autocomplete="off">
+                                <label class="btn btn-radio-green" for="radio1">Green</label>
+                              
+                                <input type="radio" class="btn-check" name="radio" id="radio2" autocomplete="off">
+                                <label class="btn btn-radio-yellow" for="radio2">Yellow</label>
+                              
+                                <input type="radio" class="btn-check" name="radio" id="radio3" autocomplete="off">
+                                <label class="btn btn-radio-red" for="radio3">Red</label>
+  
+                                   <input type="radio" class="btn-check " name="radio" id="radio4" autocomplete="off">
+                                <label class="btn btn-radio-none" for="radio4">Not Done</label>
+                              </div>
+                          </td>
+                          <td class="checkbox-col">
+                              <input type="checkbox" id="bonus" name="bonus" value="bonus">
+                          </td>
+                        </tr>
+  
+                        <tr class="first-row">
+                          <td><p>2022-11-21</p></td>
+                          <td><p>Siddharth Pandipautra</p></td>
+                          <td>Misc
+                            <p class="task-detail text-muted">shopify tutorials,techneplus (application service page model),nilaya legal site setup</p>
+                            <div class="d-flex">
+                              <input type="radio" class="btn-check" name="radiobtn" id="radiobtn1" autocomplete="off">
+                              <label class="btn btn-radio-green" for="radiobtn1">Green</label>
+                            
+                              <input type="radio" class="btn-check" name="radiobtn" id="radiobtn2" autocomplete="off">
+                              <label class="btn btn-radio-yellow" for="radiobtn2">Yellow</label>
+                            
+                              <input type="radio" class="btn-check" name="radiobtn" id="radiobtn3" autocomplete="off">
+                              <label class="btn btn-radio-red" for="radiobtn3">Red</label>
+  
+                                 <input type="radio" class="btn-check" name="radiobtn" id="radiobtn4" autocomplete="off">
+                              <label class="btn btn-radio-none" for="radiobtn4">Not Done</label>
+                            </div>
+                          </td>
+                          <td class="checkbox-col">
+                              <input type="checkbox" id="bonus" name="bonus" value="bonus">
+                          </td>
+                        </tr>
+                        <tr class="first-row">
+                          <td><p>2022-11-21</p></td>
+                          <td><p>Siddharth Pandipautra</p></td>
+                          <td>Misc
+                            <p class="task-detail text-muted">shopify tutorials,techneplus (application service page model),nilaya legal site setup</p>
+                            <div class="d-flex">
+                              <input type="radio" class="btn-check" name="button" id="button1" autocomplete="off">
+                              <label class="btn btn-radio-green" for="button1">Green</label>
+                            
+                              <input type="radio" class="btn-check" name="button" id="button2" autocomplete="off">
+                              <label class="btn btn-radio-yellow" for="button2">Yellow</label>
+                            
+                              <input type="radio" class="btn-check" name="button" id="button3" autocomplete="off">
+                              <label class="btn btn-radio-red" for="button3">Red</label>
+  
+                                 <input type="radio" class="btn-check" name="button" id="button4" autocomplete="off">
+                              <label class="btn btn-radio-none" for="button4">Not Done</label>
+                            </div>
+                          </td>
+                          <td class="checkbox-col">
+                              <input type="checkbox" id="bonus" name="bonus" value="bonus">
+                          </td>
+                        </tr>
+                        <tr class="first-row">
+                          <td><p>2022-11-21</p></td>
+                          <td><p>Siddharth Pandipautra</p></td>
+                          <td>Misc
+                            <p class="task-detail text-muted">shopify tutorials,techneplus (application service page model),nilaya legal site setup</p>
+                            <div class="d-flex">
+                              <input type="radio" class="btn-check" name="btnr" id="btnr1" autocomplete="off">
+                              <label class="btn btn-radio-green" for="btnr1">Green</label>
+                            
+                              <input type="radio" class="btn-check" name="btnr" id="btnr2" autocomplete="off">
+                              <label class="btn btn-radio-yellow" for="btnr2">Yellow</label>
+                            
+                              <input type="radio" class="btn-check" name="btnr" id="btnr3" autocomplete="off">
+                              <label class="btn btn-radio-red" for="btnr3">Red</label>
+  
+                                 <input type="radio" class="btn-check" name="btnr" id="btnr4" autocomplete="off">
+                              <label class="btn btn-radio-none" for="btnr4">Not Done</label>
+                            </div>
+                          </td>
+                          <td class="checkbox-col">
+                              <input type="checkbox" id="bonus" name="bonus" value="bonus">
+                          </td>
+                        </tr>
+                        <tr class="first-row">
+                          <td><p>2022-11-21</p></td>
+                          <td><p>Siddharth Pandipautra</p></td>
+                          <td>Misc
+                            <p class="task-detail text-muted">shopify tutorials,techneplus (application service page model),nilaya legal site setup</p>
+                            <div class="d-flex">
+                              <input type="radio" class="btn-check" name="btnrad" id="btnrad1" autocomplete="off">
+                              <label class="btn btn-radio-green" for="btnrad1">Green</label>
+                            
+                              <input type="radio" class="btn-check" name="btnrad" id="btnrad2" autocomplete="off">
+                              <label class="btn btn-radio-yellow" for="btnrad2">Yellow</label>
+                            
+                              <input type="radio" class="btn-check" name="btnrad" id="btnrad3" autocomplete="off">
+                              <label class="btn btn-radio-red" for="btnrad3">Red</label>
+  
+                                 <input type="radio" class="btn-check" name="btnrad" id="btnrad4" autocomplete="off">
+                              <label class="btn btn-radio-none" for="btnrad4">Not Done</label>
+                            </div>
+                          </td>
+                          <td class="checkbox-col">
+                              <input type="checkbox" id="bonus" name="bonus" value="bonus">
+                          </td>
+                        </tr>
+                        <tr class="first-row">
+                        
+                          <td><p >2022-11-21</p></td>
+                          <td><p >Siddharth Pandipautra</p></td>
+                          <td>
+                              Misc
+                              <p class="task-detail text-muted">shopify tutorials,techneplus (application service page model),nilaya legal site setup</p>
+                            <div class="d-flex">
+                           <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off">
+                           <label class="btn btn-radio-green" for="btnradio1">Green</label>
+                         
+                           <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
+                           <label class="btn btn-radio-yellow" for="btnradio2">Yellow</label>
+                         
+                           <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
+                           <label class="btn btn-radio-red" for="btnradio3">Red</label>
+  
+                              <input type="radio" class="btn-check" name="btnradio" id="btnradio4" autocomplete="off">
+                           <label class="btn btn-radio-none" for="btnradio4">Not Done</label>
+                         </div>
+                          </td>
+                          <td class="checkbox-col">
+                              <input type="checkbox" id="bonus" name="bonus" value="bonus">
+                          </td>
+                        </tr>
+                       
+  
+                        <tr class="first-row">
+                          <td><p>2022-11-21</p></td>
+                          <td><p>Siddharth Pandipautra</p></td>
+                          <td>Misc
+                              <p class="task-detail text-muted">shopify tutorials,techneplus (application service page model),nilaya legal site setup</p>
+                              <div class="d-flex">
+                                <input type="radio" class="btn-check" name="radio" id="radio1" autocomplete="off">
+                                <label class="btn btn-radio-green" for="radio1">Green</label>
+                              
+                                <input type="radio" class="btn-check" name="radio" id="radio2" autocomplete="off">
+                                <label class="btn btn-radio-yellow" for="radio2">Yellow</label>
+                              
+                                <input type="radio" class="btn-check" name="radio" id="radio3" autocomplete="off">
+                                <label class="btn btn-radio-red" for="radio3">Red</label>
+  
+                                   <input type="radio" class="btn-check " name="radio" id="radio4" autocomplete="off">
+                                <label class="btn btn-radio-none" for="radio4">Not Done</label>
+                              </div>
+                          </td>
+                          <td class="checkbox-col">
+                              <input type="checkbox" id="bonus" name="bonus" value="bonus">
+                          </td>
+                        </tr>
+  
+                        <tr class="first-row">
+                          <td><p>2022-11-21</p></td>
+                          <td><p>Siddharth Pandipautra</p></td>
+                          <td>Misc
+                            <p class="task-detail text-muted">shopify tutorials,techneplus (application service page model),nilaya legal site setup</p>
+                            <div class="d-flex">
+                              <input type="radio" class="btn-check" name="radiobtn" id="radiobtn1" autocomplete="off">
+                              <label class="btn btn-radio-green" for="radiobtn1">Green</label>
+                            
+                              <input type="radio" class="btn-check" name="radiobtn" id="radiobtn2" autocomplete="off">
+                              <label class="btn btn-radio-yellow" for="radiobtn2">Yellow</label>
+                            
+                              <input type="radio" class="btn-check" name="radiobtn" id="radiobtn3" autocomplete="off">
+                              <label class="btn btn-radio-red" for="radiobtn3">Red</label>
+  
+                                 <input type="radio" class="btn-check" name="radiobtn" id="radiobtn4" autocomplete="off">
+                              <label class="btn btn-radio-none" for="radiobtn4">Not Done</label>
+                            </div>
+                          </td>
+                          <td class="checkbox-col">
+                              <input type="checkbox" id="bonus" name="bonus" value="bonus">
+                          </td>
+                        </tr>
+                        <tr class="first-row">
+                          <td><p>2022-11-21</p></td>
+                          <td><p>Siddharth Pandipautra</p></td>
+                          <td>Misc
+                            <p class="task-detail text-muted">shopify tutorials,techneplus (application service page model),nilaya legal site setup</p>
+                            <div class="d-flex">
+                              <input type="radio" class="btn-check" name="button" id="button1" autocomplete="off">
+                              <label class="btn btn-radio-green" for="button1">Green</label>
+                            
+                              <input type="radio" class="btn-check" name="button" id="button2" autocomplete="off">
+                              <label class="btn btn-radio-yellow" for="button2">Yellow</label>
+                            
+                              <input type="radio" class="btn-check" name="button" id="button3" autocomplete="off">
+                              <label class="btn btn-radio-red" for="button3">Red</label>
+  
+                                 <input type="radio" class="btn-check" name="button" id="button4" autocomplete="off">
+                              <label class="btn btn-radio-none" for="button4">Not Done</label>
+                            </div>
+                          </td>
+                          <td class="checkbox-col">
+                              <input type="checkbox" id="bonus" name="bonus" value="bonus">
+                          </td>
+                        </tr>
+                        <tr class="first-row">
+                          <td><p>2022-11-21</p></td>
+                          <td><p>Siddharth Pandipautra</p></td>
+                          <td>Misc
+                            <p class="task-detail text-muted">shopify tutorials,techneplus (application service page model),nilaya legal site setup</p>
+                            <div class="d-flex">
+                              <input type="radio" class="btn-check" name="btnr" id="btnr1" autocomplete="off">
+                              <label class="btn btn-radio-green" for="btnr1">Green</label>
+                            
+                              <input type="radio" class="btn-check" name="btnr" id="btnr2" autocomplete="off">
+                              <label class="btn btn-radio-yellow" for="btnr2">Yellow</label>
+                            
+                              <input type="radio" class="btn-check" name="btnr" id="btnr3" autocomplete="off">
+                              <label class="btn btn-radio-red" for="btnr3">Red</label>
+  
+                                 <input type="radio" class="btn-check" name="btnr" id="btnr4" autocomplete="off">
+                              <label class="btn btn-radio-none" for="btnr4">Not Done</label>
+                            </div>
+                          </td>
+                          <td class="checkbox-col">
+                              <input type="checkbox" id="bonus" name="bonus" value="bonus">
+                          </td>
+                        </tr>
+                        <tr class="first-row">
+                          <td><p>2022-11-21</p></td>
+                          <td><p>Siddharth Pandipautra</p></td>
+                          <td>Misc
+                            <p class="task-detail text-muted">shopify tutorials,techneplus (application service page model),nilaya legal site setup</p>
+                            <div class="d-flex">
+                              <input type="radio" class="btn-check" name="btnrad" id="btnrad1" autocomplete="off">
+                              <label class="btn btn-radio-green" for="btnrad1">Green</label>
+                            
+                              <input type="radio" class="btn-check" name="btnrad" id="btnrad2" autocomplete="off">
+                              <label class="btn btn-radio-yellow" for="btnrad2">Yellow</label>
+                            
+                              <input type="radio" class="btn-check" name="btnrad" id="btnrad3" autocomplete="off">
+                              <label class="btn btn-radio-red" for="btnrad3">Red</label>
+  
+                                 <input type="radio" class="btn-check" name="btnrad" id="btnrad4" autocomplete="off">
+                              <label class="btn btn-radio-none" for="btnrad4">Not Done</label>
+                            </div>
+                          </td>
+                          <td class="checkbox-col">
+                              <input type="checkbox" id="bonus" name="bonus" value="bonus">
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+              </div>
+             </div>
+             <div class="row">
+              <div class="col-md-12">
+                <div class="task-bottom-box">
+                <div class="row my-4">
+                 <div class="col-md-3">
+                  <label for="totaltask" class="label-txt">Total Task</label>
+                  <input type="text" id="totaltask" name="totaltask" value="8" class="input-box">
+                 </div>
+                 <div class="col-md-3">
+                  <label for="gzone" class="label-txt green-label-txt">Green Zone</label>
+                  <input type="text" id="gzone" name="gzone" value="40" class="input-box">
+                 </div>
+                 <div class="col-md-3">
+                  <label for="yzone" class="label-txt yellow-label-txt">Yellow Zone</label>
+                  <input type="text" id="yzone" name="yzone" value="20" class="input-box">
+                 </div>
+                 <div class="col-md-3">
+                  <label for="rzone" class="label-txt red-label-txt">Red Zone</label>
+                  <input type="text" id="rzone" name="rzone" value="0" class="input-box">
+                 </div>
+                </div>
+                <div class="row my-3">
+                  <div class="col-md-3">
+                   <label for="ncheck" class="label-txt">Not Checked</label>
+                   <input type="text" id="ncheck" name="ncheck" value="0" class="input-box">
+                  </div>
+                  <div class="col-md-3">
+                   <label for="ndone" class="label-txt">Not Done</label>
+                   <input type="text" id="ndone" name="ndone" value="0" class="input-box" >
+                  </div>
+                  <div class="col-md-3">
+                   <label for="bonus" class="label-txt">Bonus</label>
+                   <input type="text" id="bonus" name="bonus" value="0" class="input-box">
+                  </div>
+                  <div class="col-md-3">
+                   <label for="cancel" class="label-txt">Cancelled</label>
+                   <input type="text" id="cancel" name="cancel" value="0" class="input-box">
+                  </div>
+                 </div>
+           <div class="row">
+            <div class="col-md-12">
+              <div class="row">
+            <div class="col-md-3">
+              <label for="fname" class="label-txt">War Score</label>
+              <input type="text" id="fname" name="fname" value="60" class="input-box">
+             </div>
+             <div class="col-md-3">
+              <label for="fname" class="label-txt">Total</label>
+              <input type="text" id="fname" name="fname" value="160" class="input-box">
+             </div>
+             <div class="col-md-3">
+              <label for="fname" class="label-txt">War %</label>
+              <input type="text" id="fname" name="fname" value="37.5" class="input-box">
+             </div>
             </div>
-           <div class="col-md-12">
-            <div class="row">
-              <div class="col-md-3">
-                <div class="task-report-row">
-                  <div class="d-flex">
-                  <label for="show" class="show-text">Show:</label>
-                  <select class="form-select tablerow" aria-label="Default select example">
-                      <option selected>10 Rows</option>
-                      <option value="1">One</option>
-                      <option value="2">Two</option>
-                      <option value="3">Three</option>
-                    </select>
-                
-                  </div>
-                  </div>
-                  
-              </div>
-              <div class="col-md-3">
-               <div class="text-muted">0-0 of 0</div>
-              </div>
-              <div class="col-md-6">
-               <div class="d-flex justify-content-end">
-           
+            </div>
+            <div class="mt-5 text-center">
+             
+            
+                <button class="form-btn" >Save</button>
+                <button class="form-btn">Final Submit</button>
+          
+            </div>
+           </div>
+            
                </div>
               </div>
-              </div>
-            </div>
-           </div>
-           
-           <div class="col-md-12">
-            <div class="task-bottom-box">
-            <div class="row my-4">
-             <div class="col-md-3">
-              <label for="totaltask" class="label-txt">Total Task</label>
-              <input type="text" id="totaltask" name="totaltask" value="8" class="input-box">
              </div>
-             <div class="col-md-3">
-              <label for="gzone" class="label-txt green-label-txt">Green Zone</label>
-              <input type="text" id="gzone" name="gzone" value="40" class="input-box">
-             </div>
-             <div class="col-md-3">
-              <label for="yzone" class="label-txt yellow-label-txt">Yellow Zone</label>
-              <input type="text" id="yzone" name="yzone" value="20" class="input-box">
-             </div>
-             <div class="col-md-3">
-              <label for="rzone" class="label-txt red-label-txt">Red Zone</label>
-              <input type="text" id="rzone" name="rzone" value="0" class="input-box">
-             </div>
-            </div>
-            <div class="row my-3">
-              <div class="col-md-3">
-               <label for="ncheck" class="label-txt">Not Checked</label>
-               <input type="text" id="ncheck" name="ncheck" value="0" class="input-box">
-              </div>
-              <div class="col-md-3">
-               <label for="ndone" class="label-txt">Not Done</label>
-               <input type="text" id="ndone" name="ndone" value="0" class="input-box" >
-              </div>
-              <div class="col-md-3">
-               <label for="bonus" class="label-txt">Bonus</label>
-               <input type="text" id="bonus" name="bonus" value="0" class="input-box">
-              </div>
-              <div class="col-md-3">
-               <label for="cancel" class="label-txt">Cancelled</label>
-               <input type="text" id="cancel" name="cancel" value="0" class="input-box">
-              </div>
-             </div>
-       <div class="row">
-        <div class="col-md-12">
-          <div class="row">
-        <div class="col-md-3">
-          <label for="fname" class="label-txt">War Score</label>
-          <input type="text" id="fname" name="fname" value="60" class="input-box">
-         </div>
-         <div class="col-md-3">
-          <label for="fname" class="label-txt">Total</label>
-          <input type="text" id="fname" name="fname" value="160" class="input-box">
-         </div>
-         <div class="col-md-3">
-          <label for="fname" class="label-txt">War %</label>
-          <input type="text" id="fname" name="fname" value="37.5" class="input-box">
-         </div>
         </div>
         </div>
-        <div class="mt-5 text-center">
-         
-        
-            <button class="form-btn" >Save</button>
-            <button class="form-btn">Final Submit</button>
-      
-        </div>
-       </div>
-        
-           </div>
-          </div>
-          </div>
       </div>
-           </div>
-   
-          </div>
- 
     </main>
 
 
@@ -503,5 +747,30 @@
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
-  </body>
+ 
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.13.1/js/dataTables.bootstrap5.min.js"></script>
+ <script>
+     $(document).ready(function () {
+         $('#warreporttable').DataTable();
+     });
+ </script>
+ <script>
+ dataTable = $("#warreporttable").DataTable({
+
+language: {
+paginate: {
+next: '<i class="fa-solid fa-forward "></i>',
+previous: '<i class="fa-solid fa-backward"></i>',
+
+
+},
+info: " _START_ - _END_ out of _TOTAL_ items",
+},
+
+
+});
+ </script>
+</body>
 </html>

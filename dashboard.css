@@ -2055,6 +2055,7 @@ background-color: #fff;
 } */
 
 /* Task War Report */
+
 .task-report-box{
   padding: 20px;
   box-shadow: 0 0 10px #0000001f;
@@ -2065,7 +2066,7 @@ background-color: #fff;
 }
 
 .table{
-  border-spacing: 0 10px;
+  border-spacing: 0 10px !important;
     border-collapse: separate;
 }
 
@@ -2246,6 +2247,47 @@ table td{
   -moz-appearance: none;
   appearance: none;
 }
+.tbody, td, tfoot, th, thead, tr {
+  border-color: inherit;
+  border-style: none;
+  border-width: 0;
+}
+.form-select{
+  background-color: transparent;
+  border: 1px solid rgb(206, 212, 218);
+  
+  border-radius: 5px;
+  height: 30px;
+  color: var(--fc-md-dark);
+}
+.table.dataTable thead>tr>th.sorting:after, table.dataTable thead>tr>th.sorting_asc:after, table.dataTable thead>tr>th.sorting_desc:after, table.dataTable thead>tr>th.sorting_asc_disabled:after, table.dataTable thead>tr>th.sorting_desc_disabled:after, table.dataTable thead>tr>td.sorting:after, table.dataTable thead>tr>td.sorting_asc:after, table.dataTable thead>tr>td.sorting_desc:after, table.dataTable thead>tr>td.sorting_asc_disabled:after, table.dataTable thead>tr>td.sorting_desc_disabled:after {
+  top: 50%;
+  content: "▼";
+  display: none;
+}
+table.dataTable thead>tr>th.sorting:before, table.dataTable thead>tr>th.sorting_asc:before, table.dataTable thead>tr>th.sorting_desc:before, table.dataTable thead>tr>th.sorting_asc_disabled:before, table.dataTable thead>tr>th.sorting_desc_disabled:before, table.dataTable thead>tr>td.sorting:before, table.dataTable thead>tr>td.sorting_asc:before, table.dataTable thead>tr>td.sorting_desc:before, table.dataTable thead>tr>td.sorting_asc_disabled:before, table.dataTable thead>tr>td.sorting_desc_disabled:before {
+  bottom: 50%;
+  content: "▲";
+  display: none;
+}
+.page-link{
+  border: none;
+}
+.fa-forward {
+  color: #00AEEC;
+}
+.fa-backward {
+  color: #00AEEC;
+}
+.page-item.active .page-link {
+  z-index: 3;
+  background: #00AEEC;
+  color:#fff !important;
+}
+.page-item:not(:first-child) .page-link {
+  margin-left: -1px;
+  color: #000;
+}
 .task-bottom-box{
   margin-top: 20px;
   padding: 20px;
@@ -2375,7 +2417,7 @@ table td{
   border-radius: 5px;
   margin: 0px 8px;
   color: #fff;
-  font-weight: 500 ;
+
  }
  .form-btn-cancel{
   background-color: #fff;
@@ -2385,7 +2427,7 @@ table td{
   border-radius: 5px;
   margin: 0px 8px;
   color: #000;
-  font-weight: 500 ;
+ 
  }
  .select-circle .fullday{
   margin-left: 10px;
@@ -3087,7 +3129,6 @@ position: relative;
   vertical-align: top;
  
 }
-
 .fc table {
   width: 100%;
   table-layout: fixed;
@@ -3095,4 +3136,42 @@ position: relative;
   border-spacing: 0;
   font-size: 1em;
 }
+
+/* Project Record css  */
+
+.employeeaccordion {
+  background-color: #f0f1f2;
+  color: #000;
+  cursor: pointer;
+  padding: 10px 20px;
+  width: 100%;
+  text-align: left;
+  transition: 0.4s;
+  border-radius: 15px;
+  font-weight: 500;
+  font-size: 16px;
+  border: none;
+  outline: none;
+}
+
+.employeeaccordion:after {
+  content: 'Total hours=20.60hrs(2.29day)';
+  color: #000;
+  float: right;
+  margin-left: 5px;
+ font-size: 14px;
+}
+.project-summary-title{
+  font-size: 18px;
+}
+.project-summary p{
+  font-size: 16px;
+  font-weight: 500;
+}
+.project-summary span{
+  color: gray;
+  font-weight: normal;
+  margin-left: 5px;
+}
+
 
