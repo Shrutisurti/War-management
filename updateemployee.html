@@ -5,11 +5,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>WAR-Managetask</title>
-  <!-- 1.Owl carousel min.js -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- 1.Owl carousel min.js -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+      integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
 
-  <!-- 2.Owl carousel Theme min.css -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- 2.Owl carousel Theme min.css -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+      integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
 
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
@@ -17,36 +29,43 @@
       integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
       crossorigin="anonymous"
     />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="./dashboard.css" />
-   
-    <link  rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"/>
-    
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    />
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.2.228/pdf.min.js"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="https://mozilla.github.io/pdf.js/build/pdf.js"></script>
+    <script src="https://mozilla.github.io/pdf.js/build/pdf.js"></script>
   </head>
 
   <body>
     <!-- ==================Overlay Element and Expanded Navbar======================= -->
     <div class="dark-overlay d-xxl-none"></div>
     <div class="expanded-nav d-xxl-none">
-
       <div class="tabletView d-none d-md-block">
         <div class="row justify-content-between expNavHeader">
           <div class="col-auto">
             <div class="expNavLogo"></div>
           </div>
-  
+
           <div class="col-auto">
-            <div class= "expNavIcon expNavCloseIcon"></div>
+            <div class="expNavIcon expNavCloseIcon"></div>
           </div>
         </div>
-  
+
         <div class="row"></div>
       </div>
-      
     </div>
 
     <!-- ==================Navbar(Header)======================= -->
@@ -69,120 +88,185 @@
         ></button>
       </div>
     </header>
-    
-    <aside class="sidebar-wrapper card-defaults d-none d-xxl-block" id="sidebar-wrapper">
-        <div class="sidebar-flex">
-          <div class="companyLogo">
-            <div class="logo"></div>
-          </div>
-  
-  
-          <div class="navAccordion">
-            <div class="accordion accordion-flush" id="accordionFlushExample">
-              <div class="accordion-item">
-                <a href="#">
-                  <h2 class="accordion-header" id="flush-headingOne">
-                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne" id="accBtnhide">
-                      <div class="sideBarLogo dashboardLogo"></div>Overview Dashboard
-                    </button>
-                  </h2>
-                </a>
-                
-                <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-                  
-                </div>
-              </div>
-  
-              <p class="sidebarLabel">Admin Control</p>
-  
-              <div class="accordion-item">
-                <a href="#">
-                  <h2 class="accordion-header" id="flush-headingTwo">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                      <div class="sideBarLogo mastersLogo"></div>Masters
-                    </button>
-                  </h2>
-                </a>
-                <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
-                  <div class="accordion-body">
-                    <nav class="mastersNav">
-                      <ul class="navUl">
-                        <li><a href="#">Employee Master</a></li>
-                        <li><a href="#">Company Master</a></li>
-                        <li><a href="#">Department Master</a></li>
-                        <li><a href="#">Designation Master</a></li>
-                        <li><a href="#">Permission Master</a></li>
-                      </ul>
-                    </nav>
-                  </div>
-                </div>
-              </div>
-  
-              <p class="sidebarLabel">Management Tools</p>
-  
-              <div class="accordion-item">
-                <a href="#">
-                  <h2 class="accordion-header" id="flush-headingThree">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-                      <div class="sideBarLogo taskLogo"></div>Task Management
-                    </button>
-                  </h2>
-                </a>
-                <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
-                  <div class="accordion-body">
-                    <nav class="taskNav">
-                      <ul class="navUl">
-                        <li><a href="#">WAR Overview</a></li>
-                        <li><a href="#">Manage Tasks</a></li>
-                        <li><a href="#">War Score</a></li>
-                      </ul>
-                    </nav>
-                  </div>
-                </div>
-              </div>
-              <div class="accordion-item">
-                <h2 class="accordion-header" id="flush-headingFour">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
-                    <div class="sideBarLogo leaveLogo"></div>Leave Management
+
+    <aside
+      class="sidebar-wrapper card-defaults d-none d-xxl-block"
+      id="sidebar-wrapper"
+    >
+      <div class="sidebar-flex">
+        <div class="companyLogo">
+          <div class="logo"></div>
+        </div>
+
+        <div class="navAccordion">
+          <div class="accordion accordion-flush" id="accordionFlushExample">
+            <div class="accordion-item">
+              <a href="#">
+                <h2 class="accordion-header" id="flush-headingOne">
+                  <button
+                    class="accordion-button"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseOne"
+                    aria-expanded="false"
+                    aria-controls="flush-collapseOne"
+                    id="accBtnhide"
+                  >
+                    <div class="sideBarLogo dashboardLogo"></div>
+                    Overview Dashboard
                   </button>
                 </h2>
-                <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
-                  <div class="accordion-body">
-                    <nav class="leaveNav">
-                      <ul class="navUl">
-                        <li><a href="#">Calendar Overview</a></li>
-                        <li><a href="#">Manage Attendance</a></li>
-                        <li><a href="#">Manage Leaves</a></li>
-                      </ul>
-                    </nav>
-                  </div>
-                </div>
-              </div>
-              <div class="accordion-item">
-                <h2 class="accordion-header" id="flush-headingFive">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive" id="accBtnhide2">
-                    <div class="sideBarLogo payslipLogo"></div>Generate Payslip
+              </a>
+
+              <div
+                id="flush-collapseOne"
+                class="accordion-collapse collapse"
+                aria-labelledby="flush-headingOne"
+                data-bs-parent="#accordionFlushExample"
+              ></div>
+            </div>
+
+            <p class="sidebarLabel">Admin Control</p>
+
+            <div class="accordion-item">
+              <a href="#">
+                <h2 class="accordion-header" id="flush-headingTwo">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseTwo"
+                    aria-expanded="false"
+                    aria-controls="flush-collapseTwo"
+                  >
+                    <div class="sideBarLogo mastersLogo"></div>
+                    Masters
                   </button>
                 </h2>
-                <div id="flush-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-headingFive" data-bs-parent="#accordionFlushExample">
-                  
+              </a>
+              <div
+                id="flush-collapseTwo"
+                class="accordion-collapse collapse"
+                aria-labelledby="flush-headingTwo"
+                data-bs-parent="#accordionFlushExample"
+              >
+                <div class="accordion-body">
+                  <nav class="mastersNav">
+                    <ul class="navUl">
+                      <li><a href="#">Employee Master</a></li>
+                      <li><a href="#">Company Master</a></li>
+                      <li><a href="#">Department Master</a></li>
+                      <li><a href="#">Designation Master</a></li>
+                      <li><a href="#">Permission Master</a></li>
+                    </ul>
+                  </nav>
                 </div>
               </div>
             </div>
-          </div>
-          
-          <div class="logout">
-            <div class="logoutIcon"></div>
-            <p>Logout</p>
+
+            <p class="sidebarLabel">Management Tools</p>
+
+            <div class="accordion-item">
+              <a href="#">
+                <h2 class="accordion-header" id="flush-headingThree">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseThree"
+                    aria-expanded="false"
+                    aria-controls="flush-collapseThree"
+                  >
+                    <div class="sideBarLogo taskLogo"></div>
+                    Task Management
+                  </button>
+                </h2>
+              </a>
+              <div
+                id="flush-collapseThree"
+                class="accordion-collapse collapse"
+                aria-labelledby="flush-headingThree"
+                data-bs-parent="#accordionFlushExample"
+              >
+                <div class="accordion-body">
+                  <nav class="taskNav">
+                    <ul class="navUl">
+                      <li><a href="#">WAR Overview</a></li>
+                      <li><a href="#">Manage Tasks</a></li>
+                      <li><a href="#">War Score</a></li>
+                    </ul>
+                  </nav>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingFour">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseFour"
+                  aria-expanded="false"
+                  aria-controls="flush-collapseFour"
+                >
+                  <div class="sideBarLogo leaveLogo"></div>
+                  Leave Management
+                </button>
+              </h2>
+              <div
+                id="flush-collapseFour"
+                class="accordion-collapse collapse"
+                aria-labelledby="flush-headingFour"
+                data-bs-parent="#accordionFlushExample"
+              >
+                <div class="accordion-body">
+                  <nav class="leaveNav">
+                    <ul class="navUl">
+                      <li><a href="#">Calendar Overview</a></li>
+                      <li><a href="#">Manage Attendance</a></li>
+                      <li><a href="#">Manage Leaves</a></li>
+                    </ul>
+                  </nav>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingFive">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseFive"
+                  aria-expanded="false"
+                  aria-controls="flush-collapseFive"
+                  id="accBtnhide2"
+                >
+                  <div class="sideBarLogo payslipLogo"></div>
+                  Generate Payslip
+                </button>
+              </h2>
+              <div
+                id="flush-collapseFive"
+                class="accordion-collapse collapse"
+                aria-labelledby="flush-headingFive"
+                data-bs-parent="#accordionFlushExample"
+              ></div>
+            </div>
           </div>
         </div>
-      </aside>
 
-     <!-- Main page -> Manage Task -->
-   <main class="main-wrapper">
+        <div class="logout">
+          <div class="logoutIcon"></div>
+          <p>Logout</p>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main page -> Manage Task -->
+    <main class="main-wrapper">
       <!-- ==================Row1======================= -->
       <div class="common-box-section">
-      <!-- <div class="wizard-form-section" >
+        <!-- <div class="wizard-form-section" >
        
             <div class="wizard-form-progress-bar ">
                 <div class="wizard-form-step">
@@ -226,454 +310,661 @@
             
 
       </div> -->
-      <form action="#" class="form">
-  
-        <!-- Progress bar -->
-        <div class="progressbar">
-          
-          <div class="progress" id="progress">
-            
-          </div>
-  
-          <div
-            class="progress-step progress-step-active"
-           data-title="Personal Information"
-          ><i class="fa-solid fa-person"></i></div>
-          <div class="progress-step" data-title="Employeement Details">
-            <i class="fa-solid fa-file"></i>
-          </div>
-          <div class="progress-step" data-title=" Bank Details">
-            <i class="fa-solid fa-building-columns"></i>
-          </div>
-          <div class="progress-step" data-title="Upload Document">
-            <i class="fa-solid fa-image"></i>
-          </div>
-        </div>
-  
-        <!-- Steps -->
-        <div class="form-step form-step-active">
-           <div class="row">
-            <h5 class="my-3">Personal Details</h5>
-            <div class="col-md-6">
-                <div class="form-floating mb-3">
-                    <input type="text" class="form-control" id="personalfirstname" placeholder="name@example.com">
-                    <label for="personalfirstname"  class="form-content">Name</label>
-                  </div>
-                  <div class="form-floating mb-3">
-                    <input type="text" class="form-control" id="personalmobno" placeholder="name@example.com">
-                    <label for="personalmobno"  class="form-content">Mobile No</label>
-                  </div>
-                  <div class="form-floating mb-3">
-                    <input type="email" class="form-control" id="personalemail" placeholder="name@example.com">
-                    <label for="personalemail"  class="form-content">Email Address</label>
-                  </div>
-                  <div class="form-floating mb-3">
-                    <input type="text" class="form-control" id="residentialadd" placeholder="name@example.com">
-                    <label for="residentialadd"  class="form-content">Residential Address</label>
-                  </div>
+        <form action="#" class="form">
+          <!-- Progress bar -->
+          <div class="progressbar">
+            <div class="progress" id="progress"></div>
+
+            <div
+              class="progress-step progress-step-active"
+              data-title="Personal Information"
+            >
+              <i class="fa-solid fa-person"></i>
             </div>
-            <div class="col-md-6">
-              <div class="form-floating mb-3">
-                <input type="text" class="form-control" id="personallastname" placeholder="name@example.com">
-                <label for="personallastname"  class="form-content">Last Name</label>
-              </div>
-              <div class="form-floating mb-3">
-                <input type="date" class="form-control" id="personalbirthyear" placeholder="name@example.com">
-                <label for="personalbirthyear"  class="form-content">Birth Year</label>
-              </div>
-              <div class="form-floating mb-3">
-                <input type="text" class="form-control" id="bloodgroup" placeholder="name@example.com">
-                <label for="bloodgroup"  class="form-content">Blood Group</label>
-              </div>
-              <div class="form-floating mb-3">
-                <input type="text" class="form-control" id="permanantadd" placeholder="name@example.com">
-                <label for="permanantadd"  class="form-content">Permanant Address</label>
-              </div>
+            <div class="progress-step" data-title="Employeement Details">
+              <i class="fa-solid fa-file"></i>
             </div>
-           <hr class="my-4">
-           <h5>Emergency Contact Details</h5>
-           <div class="col-md-6">
-            <div class="form-floating mb-3">
-                <input type="text" class="form-control" id="relation" placeholder="name@example.com">
-                <label for="relation"  class="form-content">Relation</label>
-              </div>
-              <div class="form-floating mb-3">
-                <input type="text" class="form-control" id="relation2" placeholder="name@example.com">
-                <label for="relation2"  class="form-content">Relation</label>
-              </div>
-          
-        </div>
-        <div class="col-md-6">
-          <div class="form-floating mb-3">
-            <input type="text" class="form-control" id="relationmobno" placeholder="name@example.com">
-            <label for="relationmobno"  class="form-content">Mobile No</label>
+            <div class="progress-step" data-title=" Bank Details">
+              <i class="fa-solid fa-building-columns"></i>
+            </div>
+            <div class="progress-step" data-title="Upload Document">
+              <i class="fa-solid fa-image"></i>
+            </div>
           </div>
-          <div class="form-floating mb-3">
-            <input type="text" class="form-control" id="relation2mobno" placeholder="name@example.com">
-            <label for="relation2mobno"  class="form-content">Mobile No</label>
-          </div>
-     
-        </div>
-           </div>
-          <div class="d-flex justify-content-end my-3">
-            <a href="#" class="wizardbtn btn-next">Next</a>
-          </div>
-        </div>
-        <div class="form-step">
-         <div class="row">
-          <h5 class="mt-3">Reference Details</h5>
-          <h6 class="my-3">Reference Name 1</h6>
-          <div class="col-md-6">
-             <div class="form-floating mb-3">
-                <input type="text" class="form-control" id="refname1" placeholder="name@example.com">
-                <label for="refname1"  class="form-content">Reference Name 1</label>
-              </div>
-              <div class="form-floating mb-3">
-                <input type="text" class="form-control" id="refmob1" placeholder="name@example.com">
-                <label for="refmob1"  class="form-content">Mobile No</label>
-              </div>
-            </div>
-            <div class="col-md-6">
-              <div class="form-floating mb-3">
-                <input type="text" class="form-control" id="refdesignation1" placeholder="name@example.com">
-                <label for="refdesignation1"  class="form-content">Designation</label>
-              </div>
-              <div class="form-floating mb-3">
-                <input type="text" class="form-control" id="refemail1" placeholder="name@example.com">
-                <label for="refemail1"  class="form-content">Email Address</label>
-              </div>
-         
-            </div>
-          <div class="col-md-12">
-              <h6 class="my-3">Reference Name 2</h6>
-            </div>
-            <div class="col-md-6">
-              <div class="form-floating mb-3">
-                 <input type="text" class="form-control" id="refname2" placeholder="name@example.com">
-                 <label for="refname2"  class="form-content">Reference Name 2</label>
-               </div>
-               <div class="form-floating mb-3">
-                 <input type="text" class="form-control" id="refmob2" placeholder="name@example.com">
-                 <label for="refmob2"  class="form-content">Mobile No</label>
-               </div>
-             </div>
-             <div class="col-md-6">
-               <div class="form-floating mb-3">
-                 <input type="text" class="form-control" id="refdesignation2" placeholder="name@example.com">
-                 <label for="refdesignation2"  class="form-content">Designation</label>
-               </div>
-               <div class="form-floating mb-3">
-                 <input type="text" class="form-control" id="refemail2" placeholder="name@example.com">
-                 <label for="refemail2"  class="form-content">Email Address</label>
-               </div>
-          
-             </div>
-             <hr class="my-4">
-             <div class="col-md-12">
-              <h5>Previou Company Details</h5>
-            </div>
-             <div class="col-md-6">
-              <div class="form-floating mb-3">
-                 <input type="text" class="form-control" id="prevcmpname" placeholder="name@example.com">
-                 <label for="prevcmpname"  class="form-content">Name</label>
-               </div>
-            
-             </div>
-             <div class="col-md-6">
-               <div class="form-floating mb-3">
-                 <input type="text" class="form-control" id="prevcmpadd" placeholder="name@example.com">
-                 <label for="relationmobno"  class="form-content">Address</label>
-               </div>
-            </div>
-         </div>
-          <div class="d-flex justify-content-end my-3">
-            <a href="#" class="wizardbtn btn-prev">Previous</a>
-            <a href="#" class="wizardbtn btn-next">Save and continue</a>
-          </div>
-        </div>
-        <div class="form-step">
-          <div class="row">
-            <h5 class="my-3">Bank Details</h5>
-            <div class="col-md-6">
-              <div class="form-floating mb-3">
-                <input type="text" class="form-control" id="bankname" placeholder="name@example.com">
-                <label for="bankname"  class="form-content">Name</label>
-              </div>
-              <div class="form-floating mb-3">
-                <input type="text" class="form-control" id="accountno" placeholder="name@example.com">
-                <label for="accountno"  class="form-content">Account Number</label>
-              </div>
-            </div>
-           
+
+          <!-- Steps -->
+          <div class="form-step form-step-active">
+            <div class="row">
+              <h5 class="my-3">Personal Details</h5>
               <div class="col-md-6">
                 <div class="form-floating mb-3">
-                  <input type="text" class="form-control" id="ifsc" placeholder="name@example.com">
-                  <label for="ifsc"  class="form-content">IFSC</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="personalfirstname"
+                    placeholder="name@example.com"
+                  />
+                  <label for="personalfirstname" class="form-content"
+                    >Name</label
+                  >
                 </div>
                 <div class="form-floating mb-3">
-                  <input type="text" class="form-control" id="confirmaccountno" placeholder="name@example.com">
-                  <label for="confirmaccountno"  class="form-content">Confirm Account Number</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="personalmobno"
+                    placeholder="name@example.com"
+                  />
+                  <label for="personalmobno" class="form-content"
+                    >Mobile No</label
+                  >
                 </div>
-            </div>
-          </div>
-          <div class="d-flex justify-content-end my-3">
-            <a href="#" class="wizardbtn btn-prev">Previous</a>
-            <a href="#" class="wizardbtn btn-skip">Skip</a>
-            <a href="#" class="wizardbtn btn-next">Save and continue</a>
-          </div>
-        </div>
-        <div class="form-step">
-         <div class="row">
-          <h5 class="my-3">Upload Documents</h5>
-          <div class="col-md-6">
-            <div class="form-floating mb-3">
-              <input type="text" class="form-control" id="adhaarcard" placeholder="name@example.com">
-              <label for="adhaarcard"  class="form-content">Adhaar Card</label>
-            </div>
-            <div class="my-3">
-              <input type="file" id="adhaarFile" name="adhaarFile">
-              <div class="image-preview" id="imagePreview">
-                <img src=" " alt="Image Preview" class="image-preview__image"/>
-                <!-- <span class="image-preview__default_text">Image Preview</span> -->
-              
-                <canvas id="pdfViewer" class="pdfViewer" ></canvas>
+                <div class="form-floating mb-3">
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="personalemail"
+                    placeholder="name@example.com"
+                  />
+                  <label for="personalemail" class="form-content"
+                    >Email Address</label
+                  >
+                </div>
+                <div class="form-floating mb-3">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="residentialadd"
+                    placeholder="name@example.com"
+                  />
+                  <label for="residentialadd" class="form-content"
+                    >Residential Address</label
+                  >
+                </div>
               </div>
-            
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="form-floating mb-3">
-              <input type="text" class="form-control" id="pancard" placeholder="name@example.com">
-              <label for="pancard"  class="form-content">Pan Card</label>
-            </div>
-            <div class="my-3">
-              <input type="file" id="panFile" name="panFile">
-              <div class="image-preview1" id="imagePreview1">
-                <img src=" " alt="Image Preview" class="image-preview__image1"/>
-                <!-- <span class="image-preview__default_text">Image Preview</span> -->
-              
-                <canvas id="pdfViewer1" class="pdfViewer1" ></canvas>
+              <div class="col-md-6">
+                <div class="form-floating mb-3">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="personallastname"
+                    placeholder="name@example.com"
+                  />
+                  <label for="personallastname" class="form-content"
+                    >Last Name</label
+                  >
+                </div>
+                <div class="form-floating mb-3">
+                  <input
+                    type="date"
+                    class="form-control"
+                    id="personalbirthyear"
+                    placeholder="name@example.com"
+                  />
+                  <label for="personalbirthyear" class="form-content"
+                    >Birth Year</label
+                  >
+                </div>
+                <div class="form-floating mb-3">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="bloodgroup"
+                    placeholder="name@example.com"
+                  />
+                  <label for="bloodgroup" class="form-content"
+                    >Blood Group</label
+                  >
+                </div>
+                <div class="form-floating mb-3">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="permanantadd"
+                    placeholder="name@example.com"
+                  />
+                  <label for="permanantadd" class="form-content"
+                    >Permanant Address</label
+                  >
+                </div>
               </div>
-            
+              <hr class="my-4" />
+              <h5>Emergency Contact Details</h5>
+              <div class="col-md-6">
+                <div class="form-floating mb-3">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="relation"
+                    placeholder="name@example.com"
+                  />
+                  <label for="relation" class="form-content">Relation</label>
+                </div>
+                <div class="form-floating mb-3">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="relation2"
+                    placeholder="name@example.com"
+                  />
+                  <label for="relation2" class="form-content">Relation</label>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-floating mb-3">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="relationmobno"
+                    placeholder="name@example.com"
+                  />
+                  <label for="relationmobno" class="form-content"
+                    >Mobile No</label
+                  >
+                </div>
+                <div class="form-floating mb-3">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="relation2mobno"
+                    placeholder="name@example.com"
+                  />
+                  <label for="relation2mobno" class="form-content"
+                    >Mobile No</label
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="d-flex justify-content-end my-3">
+              <a href="#" class="wizardbtn btn-next">Next</a>
             </div>
           </div>
-         </div>
-          <div class="d-flex justify-content-end mb-3">
-            <a href="#" class="wizardbtn btn-prev">Previous</a>
-            <input type="submit" value="Submit" class="wizardbtn" />
+          <div class="form-step">
+            <div class="row">
+              <h5 class="mt-3">Reference Details</h5>
+              <h6 class="my-3">Reference Name 1</h6>
+              <div class="col-md-6">
+                <div class="form-floating mb-3">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="refname1"
+                    placeholder="name@example.com"
+                  />
+                  <label for="refname1" class="form-content"
+                    >Reference Name 1</label
+                  >
+                </div>
+                <div class="form-floating mb-3">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="refmob1"
+                    placeholder="name@example.com"
+                  />
+                  <label for="refmob1" class="form-content">Mobile No</label>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-floating mb-3">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="refdesignation1"
+                    placeholder="name@example.com"
+                  />
+                  <label for="refdesignation1" class="form-content"
+                    >Designation</label
+                  >
+                </div>
+                <div class="form-floating mb-3">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="refemail1"
+                    placeholder="name@example.com"
+                  />
+                  <label for="refemail1" class="form-content"
+                    >Email Address</label
+                  >
+                </div>
+              </div>
+              <div class="col-md-12">
+                <h6 class="my-3">Reference Name 2</h6>
+              </div>
+              <div class="col-md-6">
+                <div class="form-floating mb-3">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="refname2"
+                    placeholder="name@example.com"
+                  />
+                  <label for="refname2" class="form-content"
+                    >Reference Name 2</label
+                  >
+                </div>
+                <div class="form-floating mb-3">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="refmob2"
+                    placeholder="name@example.com"
+                  />
+                  <label for="refmob2" class="form-content">Mobile No</label>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-floating mb-3">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="refdesignation2"
+                    placeholder="name@example.com"
+                  />
+                  <label for="refdesignation2" class="form-content"
+                    >Designation</label
+                  >
+                </div>
+                <div class="form-floating mb-3">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="refemail2"
+                    placeholder="name@example.com"
+                  />
+                  <label for="refemail2" class="form-content"
+                    >Email Address</label
+                  >
+                </div>
+              </div>
+              <hr class="my-4" />
+              <div class="col-md-12">
+                <h5>Previou Company Details</h5>
+              </div>
+              <div class="col-md-6">
+                <div class="form-floating mb-3">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="prevcmpname"
+                    placeholder="name@example.com"
+                  />
+                  <label for="prevcmpname" class="form-content">Name</label>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-floating mb-3">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="prevcmpadd"
+                    placeholder="name@example.com"
+                  />
+                  <label for="relationmobno" class="form-content"
+                    >Address</label
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="d-flex justify-content-end my-3">
+              <a href="#" class="wizardbtn btn-prev">Previous</a>
+              <a href="#" class="wizardbtn btn-next">Save and continue</a>
+            </div>
           </div>
-        </div>
-      </form>
-    </div>
-</main>
+          <div class="form-step">
+            <div class="row">
+              <h5 class="my-3">Bank Details</h5>
+              <div class="col-md-6">
+                <div class="form-floating mb-3">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="bankname"
+                    placeholder="name@example.com"
+                  />
+                  <label for="bankname" class="form-content">Name</label>
+                </div>
+                <div class="form-floating mb-3">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="accountno"
+                    placeholder="name@example.com"
+                  />
+                  <label for="accountno" class="form-content"
+                    >Account Number</label
+                  >
+                </div>
+              </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+              <div class="col-md-6">
+                <div class="form-floating mb-3">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="ifsc"
+                    placeholder="name@example.com"
+                  />
+                  <label for="ifsc" class="form-content">IFSC</label>
+                </div>
+                <div class="form-floating mb-3">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="confirmaccountno"
+                    placeholder="name@example.com"
+                  />
+                  <label for="confirmaccountno" class="form-content"
+                    >Confirm Account Number</label
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="d-flex justify-content-end my-3">
+              <a href="#" class="wizardbtn btn-prev">Previous</a>
+              <a href="#" class="wizardbtn btn-skip">Skip</a>
+              <a href="#" class="wizardbtn btn-next">Save and continue</a>
+            </div>
+          </div>
+          <div class="form-step">
+            <div class="row">
+              <h5 class="my-3">Upload Documents</h5>
+              <div class="col-md-6">
+                <div class="form-floating mb-3">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="adhaarcard"
+                    placeholder="name@example.com"
+                  />
+                  <label for="adhaarcard" class="form-content"
+                    >Adhaar Card</label
+                  >
+                </div>
+                <div class="my-3">
+                  <input type="file" id="adhaarFile" name="adhaarFile" />
+                  <div class="image-preview" id="imagePreview">
+                    <img
+                      src=" "
+                      alt="Image Preview"
+                      class="image-preview__image"
+                    />
+                    <!-- <span class="image-preview__default_text">Image Preview</span> -->
 
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
-<script>
-const prevBtns = document.querySelectorAll(".btn-prev");
-  const nextBtns = document.querySelectorAll(".btn-next");
-  const progress = document.getElementById("progress");
-  const formSteps = document.querySelectorAll(".form-step");
-  const progressSteps = document.querySelectorAll(".progress-step");
-  
-  let formStepsNum = 0;
-  
-  nextBtns.forEach((wizardbtn) => {
-    wizardbtn.addEventListener("click", () => {
-      formStepsNum++;
-      updateFormSteps();
-      updateProgressbar();
-    });
-  });
-  
-  prevBtns.forEach((wizardbtn) => {
-    wizardbtn.addEventListener("click", () => {
-      formStepsNum--;
-      updateFormSteps();
-      updateProgressbar();
-    });
-  });
-  
-  function updateFormSteps() {
-    formSteps.forEach((formStep) => {
-      formStep.classList.contains("form-step-active") &&
-        formStep.classList.remove("form-step-active");
-    });
-  
-    formSteps[formStepsNum].classList.add("form-step-active");
-  }
-  
-  function updateProgressbar() {
-    progressSteps.forEach((progressStep, idx) => {
-      if (idx < formStepsNum + 1) {
-        progressStep.classList.add("progress-step-active");
-      } else {
-        progressStep.classList.remove("progress-step-active");
-      }
-    });
-  
-    const progressActive = document.querySelectorAll(".progress-step-active");
-  
-    progress.style.width =
-      ((progressActive.length - 1) / (progressSteps.length - 1)) * 100 + "%";
-  }</script>
-  
-  <!-- Image Preview for adhhar card upload file -->
-  <script>
-   const adhaarFile = document.getElementById("adhaarFile");
-   const previewContainer = document.getElementById("imagePreview");
-   const previewImage =  previewContainer .querySelector(".image-preview__image");
-  //  const previewdefaultText = previewContainer.querySelector(".image-preview__default_text");
+                    <canvas id="pdfViewer" class="pdfViewer"></canvas>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-floating mb-3">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="pancard"
+                    placeholder="name@example.com"
+                  />
+                  <label for="pancard" class="form-content">Pan Card</label>
+                </div>
+                <div class="my-3">
+                  <input type="file" id="panFile" name="panFile" />
+                  <div class="image-preview1" id="imagePreview1">
+                    <img
+                      src=" "
+                      alt="Image Preview"
+                      class="image-preview__image1"
+                    />
+                    <!-- <span class="image-preview__default_text">Image Preview</span> -->
 
-     adhaarFile.addEventListener("change",function() {
-      const file = this.files[0];
-      console.log(file);
+                    <canvas id="pdfViewer1" class="pdfViewer1"></canvas>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="d-flex justify-content-end mb-3">
+              <a href="#" class="wizardbtn btn-prev">Previous</a>
+              <input type="submit" value="Submit" class="wizardbtn" />
+            </div>
+          </div>
+        </form>
+      </div>
+    </main>
 
-      if(file){
-        const reader = new FileReader();
-        // previewdefaultText.style.display= 'none';
-        previewImage.style.display='block';
-        previewImage.style.position='relative';
-        previewImage.style.left='6rem';
-        reader.addEventListener("load", function(){
-          console.log(this);
-          previewImage.setAttribute("src", this.result);
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+      integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+      integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      const prevBtns = document.querySelectorAll(".btn-prev");
+      const nextBtns = document.querySelectorAll(".btn-next");
+      const progress = document.getElementById("progress");
+      const formSteps = document.querySelectorAll(".form-step");
+      const progressSteps = document.querySelectorAll(".progress-step");
+
+      let formStepsNum = 0;
+
+      nextBtns.forEach((wizardbtn) => {
+        wizardbtn.addEventListener("click", () => {
+          formStepsNum++;
+          updateFormSteps();
+          updateProgressbar();
         });
-          reader.readAsDataURL(file);
+      });
+
+      prevBtns.forEach((wizardbtn) => {
+        wizardbtn.addEventListener("click", () => {
+          formStepsNum--;
+          updateFormSteps();
+          updateProgressbar();
+        });
+      });
+
+      function updateFormSteps() {
+        formSteps.forEach((formStep) => {
+          formStep.classList.contains("form-step-active") &&
+            formStep.classList.remove("form-step-active");
+        });
+
+        formSteps[formStepsNum].classList.add("form-step-active");
       }
-     });
-  </script>
 
-  <!-- Image Preview for pan card upload file -->
-<script>
-  const panFile = document.getElementById("panFile");
-  const previewContainer1 = document.getElementById("imagePreview1");
-  const previewImage1 =  previewContainer1 .querySelector(".image-preview__image1");
- //  const previewdefaultText = previewContainer.querySelector(".image-preview__default_text");
+      function updateProgressbar() {
+        progressSteps.forEach((progressStep, idx) => {
+          if (idx < formStepsNum + 1) {
+            progressStep.classList.add("progress-step-active");
+          } else {
+            progressStep.classList.remove("progress-step-active");
+          }
+        });
 
-    panFile.addEventListener("change",function() {
-     const file = this.files[0];
-     console.log(file);
+        const progressActive = document.querySelectorAll(
+          ".progress-step-active"
+        );
 
-     if(file){
-       const reader = new FileReader();
-       // previewdefaultText.style.display= 'none';
-       previewImage1.style.display='block';
-       previewImage.style.position='relative';
-        previewImage.style.left='6rem';
-       reader.addEventListener("load", function(){
-         console.log(this);
-         previewImage1.setAttribute("src", this.result);
-       });
-         reader.readAsDataURL(file);
-     }
-    });
- </script>
+        progress.style.width =
+          ((progressActive.length - 1) / (progressSteps.length - 1)) * 100 +
+          "%";
+      }
+    </script>
 
-  <!-- Pdf Preview for adhhar card upload file -->
-<script>
- // Loaded via <script> tag, create shortcut to access PDF.js exports.
-var pdfjsLib = window['pdfjs-dist/build/pdf'];
-// The workerSrc property shall be specified.
-pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://mozilla.github.io/pdf.js/build/pdf.worker.js';
+    <!-- Image Preview for adhhar card upload file -->
+    <script>
+      const adhaarFile = document.getElementById("adhaarFile");
+      const previewContainer = document.getElementById("imagePreview");
+      const previewImage = previewContainer.querySelector(
+        ".image-preview__image"
+      );
+      //  const previewdefaultText = previewContainer.querySelector(".image-preview__default_text");
 
-$("#adhaarFile").on("change", function(e){
-	var file = e.target.files[0]
-	if(file.type == "application/pdf"){
-		var fileReader = new FileReader();  
-		fileReader.onload = function() {
-			var pdfData = new Uint8Array(this.result);
-			// Using DocumentInitParameters object to load binary data.
-			var loadingTask = pdfjsLib.getDocument({data: pdfData});
-			loadingTask.promise.then(function(pdf) {
-			  console.log('PDF loaded');
-			  
-			  // Fetch the first page
-			  var pageNumber = 1;
-			  pdf.getPage(pageNumber).then(function(page) {
-				console.log('Page loaded');
-				
-				var scale = 1.5;
-				var viewport = page.getViewport({scale: scale});
+      adhaarFile.addEventListener("change", function () {
+        const file = this.files[0];
+        console.log(file);
 
-				// Prepare canvas using PDF page dimensions
-				var canvas = $("#pdfViewer")[0];
-				var context = canvas.getContext('2d');
-				canvas.height = viewport.height;
-				canvas.width = viewport.width;
+        if (file) {
+          const reader = new FileReader();
+          // previewdefaultText.style.display= 'none';
+          previewImage.style.display = "block";
+          previewImage.style.position = "relative";
+          previewImage.style.left = "6rem";
+          reader.addEventListener("load", function () {
+            console.log(this);
+            previewImage.setAttribute("src", this.result);
+          });
+          reader.readAsDataURL(file);
+        }
+      });
+    </script>
 
-				// Render PDF page into canvas context
-				var renderContext = {
-				  canvasContext: context,
-				  viewport: viewport
-				};
-				var renderTask = page.render(renderContext);
-				renderTask.promise.then(function () {
-				  console.log('Page rendered');
-				});
-			  });
-			}, function (reason) {
-			  // PDF loading error
-			  console.error(reason);
-			});
-		};
-		fileReader.readAsArrayBuffer(file);
-	}
-});
-  </script>
+    <!-- Image Preview for pan card upload file -->
+    <script>
+      const panFile = document.getElementById("panFile");
+      const previewContainer1 = document.getElementById("imagePreview1");
+      const previewImage1 = previewContainer1.querySelector(
+        ".image-preview__image1"
+      );
+      //  const previewdefaultText = previewContainer.querySelector(".image-preview__default_text");
 
-  <!-- pdf Preview for pan card upload file -->
-<script>
-  // Loaded via <script> tag, create shortcut to access PDF.js exports.
- var pdfjsLib = window['pdfjs-dist/build/pdf'];
- // The workerSrc property shall be specified.
- pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://mozilla.github.io/pdf.js/build/pdf.worker.js';
- 
- $("#panFile").on("change", function(e){
-   var file = e.target.files[0]
-   if(file.type == "application/pdf"){
-     var fileReader = new FileReader();  
-     fileReader.onload = function() {
-       var pdfData = new Uint8Array(this.result);
-       // Using DocumentInitParameters object to load binary data.
-       var loadingTask = pdfjsLib.getDocument({data: pdfData});
-       loadingTask.promise.then(function(pdf) {
-         console.log('PDF loaded');
-         
-         // Fetch the first page
-         var pageNumber = 1;
-         pdf.getPage(pageNumber).then(function(page) {
-         console.log('Page loaded');
-         
-         var scale = 1.5;
-         var viewport = page.getViewport({scale: scale});
- 
-         // Prepare canvas using PDF page dimensions
-         var canvas = $("#pdfViewer1")[0];
-         var context = canvas.getContext('2d');
-         canvas.height = viewport.height;
-         canvas.width = viewport.width;
- 
-         // Render PDF page into canvas context
-         var renderContext = {
-           canvasContext: context,
-           viewport: viewport
-         };
-         var renderTask = page.render(renderContext);
-         renderTask.promise.then(function () {
-           console.log('Page rendered');
-         });
-         });
-       }, function (reason) {
-         // PDF loading error
-         console.error(reason);
-       });
-     };
-     fileReader.readAsArrayBuffer(file);
-   }
- });
-   </script>
+      panFile.addEventListener("change", function () {
+        const file = this.files[0];
+        console.log(file);
+
+        if (file) {
+          const reader = new FileReader();
+          // previewdefaultText.style.display= 'none';
+          previewImage1.style.display = "block";
+          previewImage.style.position = "relative";
+          previewImage.style.left = "6rem";
+          reader.addEventListener("load", function () {
+            console.log(this);
+            previewImage1.setAttribute("src", this.result);
+          });
+          reader.readAsDataURL(file);
+        }
+      });
+    </script>
+
+    <!-- Pdf Preview for adhhar card upload file -->
+    <script>
+      // Loaded via <script> tag, create shortcut to access PDF.js exports.
+      var pdfjsLib = window["pdfjs-dist/build/pdf"];
+      // The workerSrc property shall be specified.
+      pdfjsLib.GlobalWorkerOptions.workerSrc =
+        "https://mozilla.github.io/pdf.js/build/pdf.worker.js";
+
+      $("#adhaarFile").on("change", function (e) {
+        var file = e.target.files[0];
+        if (file.type == "application/pdf") {
+          var fileReader = new FileReader();
+          fileReader.onload = function () {
+            var pdfData = new Uint8Array(this.result);
+            // Using DocumentInitParameters object to load binary data.
+            var loadingTask = pdfjsLib.getDocument({ data: pdfData });
+            loadingTask.promise.then(
+              function (pdf) {
+                console.log("PDF loaded");
+
+                // Fetch the first page
+                var pageNumber = 1;
+                pdf.getPage(pageNumber).then(function (page) {
+                  console.log("Page loaded");
+
+                  var scale = 1.5;
+                  var viewport = page.getViewport({ scale: scale });
+
+                  // Prepare canvas using PDF page dimensions
+                  var canvas = $("#pdfViewer")[0];
+                  var context = canvas.getContext("2d");
+                  canvas.height = viewport.height;
+                  canvas.width = viewport.width;
+
+                  // Render PDF page into canvas context
+                  var renderContext = {
+                    canvasContext: context,
+                    viewport: viewport,
+                  };
+                  var renderTask = page.render(renderContext);
+                  renderTask.promise.then(function () {
+                    console.log("Page rendered");
+                  });
+                });
+              },
+              function (reason) {
+                // PDF loading error
+                console.error(reason);
+              }
+            );
+          };
+          fileReader.readAsArrayBuffer(file);
+        }
+      });
+    </script>
+
+    <!-- pdf Preview for pan card upload file -->
+    <script>
+      // Loaded via <script> tag, create shortcut to access PDF.js exports.
+      var pdfjsLib = window["pdfjs-dist/build/pdf"];
+      // The workerSrc property shall be specified.
+      pdfjsLib.GlobalWorkerOptions.workerSrc =
+        "https://mozilla.github.io/pdf.js/build/pdf.worker.js";
+
+      $("#panFile").on("change", function (e) {
+        var file = e.target.files[0];
+        if (file.type == "application/pdf") {
+          var fileReader = new FileReader();
+          fileReader.onload = function () {
+            var pdfData = new Uint8Array(this.result);
+            // Using DocumentInitParameters object to load binary data.
+            var loadingTask = pdfjsLib.getDocument({ data: pdfData });
+            loadingTask.promise.then(
+              function (pdf) {
+                console.log("PDF loaded");
+
+                // Fetch the first page
+                var pageNumber = 1;
+                pdf.getPage(pageNumber).then(function (page) {
+                  console.log("Page loaded");
+
+                  var scale = 1.5;
+                  var viewport = page.getViewport({ scale: scale });
+
+                  // Prepare canvas using PDF page dimensions
+                  var canvas = $("#pdfViewer1")[0];
+                  var context = canvas.getContext("2d");
+                  canvas.height = viewport.height;
+                  canvas.width = viewport.width;
+
+                  // Render PDF page into canvas context
+                  var renderContext = {
+                    canvasContext: context,
+                    viewport: viewport,
+                  };
+                  var renderTask = page.render(renderContext);
+                  renderTask.promise.then(function () {
+                    console.log("Page rendered");
+                  });
+                });
+              },
+              function (reason) {
+                // PDF loading error
+                console.error(reason);
+              }
+            );
+          };
+          fileReader.readAsArrayBuffer(file);
+        }
+      });
+    </script>
   </body>
 </html>
