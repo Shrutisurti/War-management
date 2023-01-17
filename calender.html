@@ -1,809 +1,726 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Calender</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.7.1/fullcalendar.css" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
-      crossorigin="anonymous"
-    />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="./dashboard.css" />
 
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
-    />
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calender</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.7.1/fullcalendar.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous" />
+  <link rel="stylesheet" href="./dashboard.css" />
 
-  <body>
-    <!-- ==================Overlay Element and Expanded Navbar======================= -->
-    <div class="dark-overlay d-xxl-none"></div>
-    <div class="expanded-nav d-xxl-none">
-      <div class="tabletView d-none d-md-block">
-        <div class="row justify-content-between expNavHeader">
-          <div class="col-auto">
-            <div class="expNavLogo"></div>
-          </div>
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+</head>
 
-          <div class="col-auto">
-            <div class="expNavIcon expNavCloseIcon"></div>
-          </div>
+<body>
+  <!-- ==================Overlay Element and Expanded Navbar======================= -->
+  <div class="dark-overlay d-xxl-none"></div>
+  <div class="expanded-nav d-xxl-none">
+    <div class="tabletView d-none d-md-block">
+      <div class="row justify-content-between expNavHeader">
+        <div class="col-auto">
+          <div class="expNavLogo"></div>
         </div>
 
-        <div class="row"></div>
+        <div class="col-auto">
+          <div class="expNavIcon expNavCloseIcon"></div>
+        </div>
+      </div>
+
+      <div class="row"></div>
+    </div>
+  </div>
+
+  <!-- ==================Navbar(Header)======================= -->
+  <header class="header-wrapper">
+    <div class="header-text">
+      <h1>Calender</h1>
+    </div>
+    <div class="header-icons">
+      <button type="button" class="header-icon" id="notif-icon"></button>
+      <button type="button" class="header-icon" id="settings-icon"></button>
+      <button type="button" class="header-icon d-xxl-none" id="hamburger-icon"></button>
+      <button type="button" class="header-icon-lg" id="user-profile-icon"></button>
+    </div>
+  </header>
+
+  <aside class="sidebar-wrapper card-defaults d-none d-xxl-block" id="sidebar-wrapper">
+    <div class="sidebar-flex">
+      <div class="companyLogo">
+        <div class="logo"></div>
+      </div>
+
+      <div class="navAccordion">
+        <div class="accordion accordion-flush" id="accordionFlushExample">
+          <div class="accordion-item">
+            <a href="#">
+              <h2 class="accordion-header" id="flush-headingOne">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne"
+                  id="accBtnhide">
+                  <div class="sideBarLogo dashboardLogo"></div>
+                  Overview Dashboard
+                </button>
+              </h2>
+            </a>
+
+            <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
+              data-bs-parent="#accordionFlushExample"></div>
+          </div>
+
+          <p class="sidebarLabel">Admin Control</p>
+
+          <div class="accordion-item">
+            <a href="#">
+              <h2 class="accordion-header" id="flush-headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                  <div class="sideBarLogo mastersLogo"></div>
+                  Masters
+                </button>
+              </h2>
+            </a>
+            <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo"
+              data-bs-parent="#accordionFlushExample">
+              <div class="accordion-body">
+                <nav class="mastersNav">
+                  <ul class="navUl">
+                    <li><a href="#">Employee Master</a></li>
+                    <li><a href="#">Company Master</a></li>
+                    <li><a href="#">Department Master</a></li>
+                    <li><a href="#">Designation Master</a></li>
+                    <li><a href="#">Permission Master</a></li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+          </div>
+
+          <p class="sidebarLabel">Management Tools</p>
+
+          <div class="accordion-item">
+            <a href="#">
+              <h2 class="accordion-header" id="flush-headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                  <div class="sideBarLogo taskLogo"></div>
+                  Task Management
+                </button>
+              </h2>
+            </a>
+            <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree"
+              data-bs-parent="#accordionFlushExample">
+              <div class="accordion-body">
+                <nav class="taskNav">
+                  <ul class="navUl">
+                    <li><a href="#">WAR Overview</a></li>
+                    <li><a href="#">Manage Tasks</a></li>
+                    <li><a href="#">War Score</a></li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingFour">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+                <div class="sideBarLogo leaveLogo"></div>
+                Leave Management
+              </button>
+            </h2>
+            <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour"
+              data-bs-parent="#accordionFlushExample">
+              <div class="accordion-body">
+                <nav class="leaveNav">
+                  <ul class="navUl">
+                    <li><a href="#">Calendar Overview</a></li>
+                    <li><a href="#">Manage Attendance</a></li>
+                    <li><a href="#">Manage Leaves</a></li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingFive">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive"
+                id="accBtnhide2">
+                <div class="sideBarLogo payslipLogo"></div>
+                Generate Payslip
+              </button>
+            </h2>
+            <div id="flush-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-headingFive"
+              data-bs-parent="#accordionFlushExample"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="logout">
+        <div class="logoutIcon"></div>
+        <p>Logout</p>
       </div>
     </div>
+  </aside>
 
-    <!-- ==================Navbar(Header)======================= -->
-    <header class="header-wrapper">
-      <div class="header-text">
-        <h1>Calender</h1>
-      </div>
-      <div class="header-icons">
-        <button type="button" class="header-icon" id="notif-icon"></button>
-        <button type="button" class="header-icon" id="settings-icon"></button>
-        <button
-          type="button"
-          class="header-icon d-xxl-none"
-          id="hamburger-icon"
-        ></button>
-        <button
-          type="button"
-          class="header-icon-lg"
-          id="user-profile-icon"
-        ></button>
-      </div>
-    </header>
+  <!-- Main page -> Manage Task -->
+  <main class="main-wrapper">
+    <!-- ==================Row1======================= -->
+    <div class="leave-application-section">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="object-tools">
+            <div class="d-flex justify-content-between">
+              <div>
+                <button class="prevbutton" id="prev">
 
-    <aside
-      class="sidebar-wrapper card-defaults d-none d-xxl-block"
-      id="sidebar-wrapper"
-    >
-      <div class="sidebar-flex">
-        <div class="companyLogo">
-          <div class="logo"></div>
-        </div>
-
-        <div class="navAccordion">
-          <div class="accordion accordion-flush" id="accordionFlushExample">
-            <div class="accordion-item">
-              <a href="#">
-                <h2 class="accordion-header" id="flush-headingOne">
-                  <button
-                    class="accordion-button"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#flush-collapseOne"
-                    aria-expanded="false"
-                    aria-controls="flush-collapseOne"
-                    id="accBtnhide"
-                  >
-                    <div class="sideBarLogo dashboardLogo"></div>
-                    Overview Dashboard
-                  </button>
-                </h2>
-              </a>
-
-              <div
-                id="flush-collapseOne"
-                class="accordion-collapse collapse"
-                aria-labelledby="flush-headingOne"
-                data-bs-parent="#accordionFlushExample"
-              ></div>
-            </div>
-
-            <p class="sidebarLabel">Admin Control</p>
-
-            <div class="accordion-item">
-              <a href="#">
-                <h2 class="accordion-header" id="flush-headingTwo">
-                  <button
-                    class="accordion-button collapsed"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#flush-collapseTwo"
-                    aria-expanded="false"
-                    aria-controls="flush-collapseTwo"
-                  >
-                    <div class="sideBarLogo mastersLogo"></div>
-                    Masters
-                  </button>
-                </h2>
-              </a>
-              <div
-                id="flush-collapseTwo"
-                class="accordion-collapse collapse"
-                aria-labelledby="flush-headingTwo"
-                data-bs-parent="#accordionFlushExample"
-              >
-                <div class="accordion-body">
-                  <nav class="mastersNav">
-                    <ul class="navUl">
-                      <li><a href="#">Employee Master</a></li>
-                      <li><a href="#">Company Master</a></li>
-                      <li><a href="#">Department Master</a></li>
-                      <li><a href="#">Designation Master</a></li>
-                      <li><a href="#">Permission Master</a></li>
-                    </ul>
-                  </nav>
-                </div>
-              </div>
-            </div>
-
-            <p class="sidebarLabel">Management Tools</p>
-
-            <div class="accordion-item">
-              <a href="#">
-                <h2 class="accordion-header" id="flush-headingThree">
-                  <button
-                    class="accordion-button collapsed"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#flush-collapseThree"
-                    aria-expanded="false"
-                    aria-controls="flush-collapseThree"
-                  >
-                    <div class="sideBarLogo taskLogo"></div>
-                    Task Management
-                  </button>
-                </h2>
-              </a>
-              <div
-                id="flush-collapseThree"
-                class="accordion-collapse collapse"
-                aria-labelledby="flush-headingThree"
-                data-bs-parent="#accordionFlushExample"
-              >
-                <div class="accordion-body">
-                  <nav class="taskNav">
-                    <ul class="navUl">
-                      <li><a href="#">WAR Overview</a></li>
-                      <li><a href="#">Manage Tasks</a></li>
-                      <li><a href="#">War Score</a></li>
-                    </ul>
-                  </nav>
-                </div>
-              </div>
-            </div>
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="flush-headingFour">
-                <button
-                  class="accordion-button collapsed"
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#flush-collapseFour"
-                  aria-expanded="false"
-                  aria-controls="flush-collapseFour"
-                >
-                  <div class="sideBarLogo leaveLogo"></div>
-                  Leave Management
+                  <span><i class="fa-solid fa-arrow-left"></i> </span>
                 </button>
-              </h2>
-              <div
-                id="flush-collapseFour"
-                class="accordion-collapse collapse"
-                aria-labelledby="flush-headingFour"
-                data-bs-parent="#accordionFlushExample"
-              >
-                <div class="accordion-body">
-                  <nav class="leaveNav">
-                    <ul class="navUl">
-                      <li><a href="#">Calendar Overview</a></li>
-                      <li><a href="#">Manage Attendance</a></li>
-                      <li><a href="#">Manage Leaves</a></li>
-                    </ul>
-                  </nav>
-                </div>
-              </div>
-            </div>
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="flush-headingFive">
-                <button
-                  class="accordion-button collapsed"
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#flush-collapseFive"
-                  aria-expanded="false"
-                  aria-controls="flush-collapseFive"
-                  id="accBtnhide2"
-                >
-                  <div class="sideBarLogo payslipLogo"></div>
-                  Generate Payslip
+                <label>January 2023</label>
+                <button class="nextbutton" id="next">
+                  <i class="fa-solid fa-arrow-right"></i>
                 </button>
-              </h2>
-              <div
-                id="flush-collapseFive"
-                class="accordion-collapse collapse"
-                aria-labelledby="flush-headingFive"
-                data-bs-parent="#accordionFlushExample"
-              ></div>
+              </div>
+              <div class="title_cal">
+                <div class="datetitle"><span id="sdate"></span></div>
+                <div class="monthtitle"><span id="titledate"></span></div>
+                <div class="monthyear"><span id="titleyear"></span></div>
+              </div>
+
+              <div class="colorpick">
+                <span class="dotgreen"><i class="fa-solid fa-square"></i></span><span class="textdot">Present</span>
+                <span class="dotred"><i class="fa-solid fa-square"></i></span><span class="textdot">Absent</span>
+                <span class="dotyellow"><i class="fa-solid fa-square"></i></span><span class="textdot">WeeklyOff</span>
+                <!-- <span class="dotblue"><i class="fa-solid fa-square"></i></span><span class="textdot">Holidays</span> -->
+              </div>
             </div>
           </div>
-        </div>
-
-        <div class="logout">
-          <div class="logoutIcon"></div>
-          <p>Logout</p>
+          <div id="calendar"> </div>
         </div>
       </div>
-    </aside>
+    </div>
+  </main>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
+    integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-    <!-- Main page -> Manage Task -->
-    <main class="main-wrapper">
-      <!-- ==================Row1======================= -->
-        <div class="leave-application-section">
-          <div class="row">
-            <div class="col-md-12">
-              <div class="object-tools">
-             <div class="d-flex justify-content-between">
-                <div>
-                    <button class="prevbutton" id="prev">
-                 
-                      <span><i class="fa-solid fa-arrow-left"></i> </span>     
-                        </button> 
-                       <label>January 2023</label>
-                    <button class="nextbutton" id="next">                
-                      <i class="fa-solid fa-arrow-right"></i>              
-                        </button> 
-                </div>
-                <div class="title_cal">
-                    <div class="datetitle"><span id="sdate"></span></div>
-                    <div class="monthtitle"><span id="titledate"></span></div>
-                    <div class="monthyear"><span id="titleyear"></span></div>
-                </div>
-               
-                <div class="colorpick">
-                    <span class="dotgreen"><i class="fa-solid fa-square"></i></span><span class="textdot">Present</span>
-                   <span class="dotred"><i class="fa-solid fa-square"></i></span><span class="textdot">Absent</span>
-                    <span class="dotyellow"><i class="fa-solid fa-square"></i></span><span class="textdot">WeeklyOff</span>
-                    <!-- <span class="dotblue"><i class="fa-solid fa-square"></i></span><span class="textdot">Holidays</span> -->
-                </div>
-              </div>
-            </div>
-            <div id="calendar"> </div>
-            </div>
-          </div>
-        </div>
-    </main>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
-      integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
-
-    <script
-    src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-    crossorigin="anonymous"
-  ></script>
+    crossorigin="anonymous"></script>
 
-  <script
-    src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
     integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
-    crossorigin="anonymous"
-  ></script>
-  <script
-    src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
     integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
-    crossorigin="anonymous"
-  ></script>
-    <script src='http://fullcalendar.io/js/fullcalendar-2.1.1/lib/jquery.min.js'></script>
+    crossorigin="anonymous"></script>
+  <script src='http://fullcalendar.io/js/fullcalendar-2.1.1/lib/jquery.min.js'></script>
 
-    <script src='http://fullcalendar.io/js/fullcalendar-2.1.1/lib/moment.min.js'></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.7.1/fullcalendar.js"></script>
+  <script src='http://fullcalendar.io/js/fullcalendar-2.1.1/lib/moment.min.js'></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.7.1/fullcalendar.js"></script>
 
-    <script>
-      $(document).ready(function() {
+  <script>
+    $(document).ready(function () {
 
-var d = new Date();
+      var d = new Date();
 
-var n = d.getMonth();
+      var n = d.getMonth();
 
-month = n + 1;
+      month = n + 1;
 
-var year = d.getFullYear();
+      var year = d.getFullYear();
 
-loadCal(month, year);
+      loadCal(month, year);
+    });
+
+    function loadCal(month, year) {
+
+      postData = {
+
+
+
+        'month': month,
+
+        'year': year
+
+      }
+      $("#prev").click(function () {
+
+        var tdate = $("#sdate").text();
+
+        console.log("tdate", tdate)
+
+        var res = tdate.split("-")[1];
+
+        month = res - 1
+
+        console.log("prevmonth", month)
+
+        var year = tdate.split("-")[0];
+
+        console.log("yy", year)
+
+
+
+        if (month <= 12 && month != 0) {
+
+          month = month;
+
+          console.log("month", month)
+
+        } else {
+
+          year = year - 1;
+
+          console.log("year", year)
+
+          month = 12;
+
+          console.log("month", month)
+
+        }
+
+        loadCal(month, year);
+
+
+
       });
 
-      function loadCal(month, year) {
-
-postData = {
-
-  
-
-    'month': month,
-
-    'year': year
-
-}
-      $("#prev").click(function() {
-
-var tdate = $("#sdate").text();
-
-console.log("tdate", tdate)
-
-var res = tdate.split("-")[1];
-
-month = res - 1
-
-console.log("prevmonth", month)
-
-var year = tdate.split("-")[0];
-
-console.log("yy", year)
 
 
 
-if (month <= 12 && month != 0) {
+      $("#next").click(function () {
 
-    month = month;
+        var tdate = $("#sdate").text();
 
-    console.log("month", month)
+        console.log("tdate", tdate)
 
-} else {
+        var res = parseInt(tdate.split("-")[1]);
 
-    year = year - 1;
+        month = res + 1
 
-    console.log("year", year)
+        console.log("prevmonth", month)
 
-    month = 12;
+        var year = parseInt(tdate.split("-")[0]);
 
-    console.log("month", month)
+        console.log("yy", year)
 
-}
+        if (month <= 12) {
 
-loadCal(month, year);
+          month = month;
 
+          console.log("month", month)
 
+        } else {
 
-});
+          year = year + 1;
 
+          console.log("year", year)
 
+          month = 1;
 
+          console.log("month", month)
 
-$("#next").click(function() {
-
-var tdate = $("#sdate").text();
-
-console.log("tdate", tdate)
-
-var res = parseInt(tdate.split("-")[1]);
-
-month = res + 1
-
-console.log("prevmonth", month)
-
-var year = parseInt(tdate.split("-")[0]);
-
-console.log("yy", year)
-
-if (month <= 12) {
-
-    month = month;
-
-    console.log("month", month)
-
-} else {
-
-    year = year + 1;
-
-    console.log("year", year)
-
-    month = 1;
-
-    console.log("month", month)
-
-}
-
-loadCal(month, year);
-
-
-
-});
-
-
-
-function GetMonthName(monthNumber) {
-
-var months = ['January', 'February', 'March', 'April', 'May', 'June',
-
-    'July', 'August', 'September', 'October', 'November', 'December'
-
-];
-
-return months[monthNumber - 1];
-
-}
-    </script>
-    <script>
-      response = {
-    "data": [
-        {
-            "employeeId": "36",
-            "status": "01 Sat NF",
-            "att_status": "NF",
-            "fulldate": "2022-01-01",
-            "inTime": "",
-            "outTime": "",
-            "Total": ""
-        },
-        {
-            "employeeId": "36",
-            "status": "02 Sun WO",
-            "att_status": "WO",
-            "fulldate": "2022-01-02",
-            "inTime": "",
-            "outTime": "",
-            "Total": ""
-        },
-        {
-            "employeeId": "36",
-            "status": "03 Mon NF",
-            "att_status": "NF",
-            "fulldate": "2022-01-03",
-            "inTime": "",
-            "outTime": "",
-            "Total": ""
-        },
-        {
-            "employeeId": "36",
-            "status": "04 Tue NF",
-            "att_status": "NF",
-            "fulldate": "2022-01-04",
-            "inTime": "",
-            "outTime": "",
-            "Total": ""
-        },
-        {
-            "employeeId": "36",
-            "status": "05 Wed NF",
-            "att_status": "NF",
-            "fulldate": "2022-01-05",
-            "inTime": "",
-            "outTime": "",
-            "Total": ""
-        },
-        {
-            "employeeId": "36",
-            "status": "06 Thu NF",
-            "att_status": "NF",
-            "fulldate": "2022-01-06",
-            "inTime": "",
-            "outTime": "",
-            "Total": ""
-        },
-        {
-            "employeeId": "36",
-            "status": "07 Fri NF",
-            "att_status": "NF",
-            "fulldate": "2022-01-07",
-            "inTime": "",
-            "outTime": "",
-            "Total": ""
-        },
-        {
-            "employeeId": "36",
-            "status": "08 Sat WO",
-            "att_status": "WO",
-            "fulldate": "2022-01-08",
-            "inTime": "",
-            "outTime": "",
-            "Total": ""
-        },
-        {
-            "employeeId": "36",
-            "status": "09 Sun WO",
-            "att_status": "WO",
-            "fulldate": "2022-01-09",
-            "inTime": "",
-            "outTime": "",
-            "Total": ""
-        },
-        {
-            "employeeId": "36",
-            "status": "10 Mon NF",
-            "att_status": "NF",
-            "fulldate": "2022-01-10",
-            "inTime": "",
-            "outTime": "",
-            "Total": ""
-        },
-        {
-            "employeeId": "36",
-            "status": "11 Tue NF",
-            "att_status": "NF",
-            "fulldate": "2022-01-11",
-            "inTime": "",
-            "outTime": "",
-            "Total": ""
-        },
-        {
-            "employeeId": "36",
-            "status": "12 Wed NF",
-            "att_status": "NF",
-            "fulldate": "2022-01-12",
-            "inTime": "",
-            "outTime": "",
-            "Total": ""
-        },
-        {
-            "employeeId": "36",
-            "status": "13 Thu NF",
-            "att_status": "NF",
-            "fulldate": "2022-01-13",
-            "inTime": "",
-            "outTime": "",
-            "Total": ""
-        },
-        {
-            "employeeId": "36",
-            "status": "14 Fri NF",
-            "att_status": "NF",
-            "fulldate": "2022-01-14",
-            "inTime": "",
-            "outTime": "",
-            "Total": ""
-        },
-        {
-            "employeeId": "36",
-            "status": "15 Sat NF",
-            "att_status": "NF",
-            "fulldate": "2022-01-15",
-            "inTime": "",
-            "outTime": "",
-            "Total": ""
-        },
-        {
-            "employeeId": "36",
-            "status": "16 Sun WO",
-            "att_status": "WO",
-            "fulldate": "2022-01-16",
-            "inTime": "",
-            "outTime": "",
-            "Total": ""
-        },
-        {
-            "employeeId": "36",
-            "status": "17 Mon NF",
-            "att_status": "NF",
-            "fulldate": "2022-01-17",
-            "inTime": "",
-            "outTime": "",
-            "Total": ""
-        },
-        {
-            "employeeId": "36",
-            "status": "18 Tue NF",
-            "att_status": "NF",
-            "fulldate": "2022-01-18",
-            "inTime": "",
-            "outTime": "",
-            "Total": ""
-        },
-        {
-            "employeeId": "36",
-            "status": "19 Wed NF",
-            "att_status": "NF",
-            "fulldate": "2022-01-19",
-            "inTime": "",
-            "outTime": "",
-            "Total": ""
-        },
-        {
-            "employeeId": "36",
-            "status": "20 Thu NF",
-            "att_status": "NF",
-            "fulldate": "2022-01-20",
-            "inTime": "",
-            "outTime": "",
-            "Total": ""
-        },
-        {
-            "employeeId": "36",
-            "status": "21 Fri NF",
-            "att_status": "NF",
-            "fulldate": "2022-01-21",
-            "inTime": "",
-            "outTime": "",
-            "Total": ""
-        },
-        {
-            "employeeId": "36",
-            "status": "22 Sat WO",
-            "att_status": "WO",
-            "fulldate": "2022-01-22",
-            "inTime": "",
-            "outTime": "",
-            "Total": ""
-        },
-        {
-            "employeeId": "36",
-            "status": "23 Sun WO",
-            "att_status": "WO",
-            "fulldate": "2022-01-23",
-            "inTime": "",
-            "outTime": "",
-            "Total": ""
-        },
-        {
-            "employeeId": "36",
-            "status": "24 Mon NF",
-            "att_status": "NF",
-            "fulldate": "2022-01-24",
-            "inTime": "",
-            "outTime": "",
-            "Total": ""
-        },
-        {
-            "employeeId": "36",
-            "status": "25 Tue NF",
-            "att_status": "NF",
-            "fulldate": "2022-01-25",
-            "inTime": "",
-            "outTime": "",
-            "Total": ""
-        },
-        {
-            "employeeId": "36",
-            "status": "26 Wed NF",
-            "att_status": "NF",
-            "fulldate": "2022-01-26",
-            "inTime": "",
-            "outTime": "",
-            "Total": ""
-        },
-        {
-            "employeeId": "36",
-            "status": "27 Thu NF",
-            "att_status": "NF",
-            "fulldate": "2022-01-27",
-            "inTime": "",
-            "outTime": "",
-            "Total": ""
-        },
-        {
-            "employeeId": "36",
-            "status": "28 Fri NF",
-            "att_status": "NF",
-            "fulldate": "2022-01-28",
-            "inTime": "",
-            "outTime": "",
-            "Total": ""
-        },
-        {
-            "employeeId": "36",
-            "status": "29 Sat NF",
-            "att_status": "NF",
-            "fulldate": "2022-01-29",
-            "inTime": "",
-            "outTime": "",
-            "Total": ""
-        },
-        {
-            "employeeId": "36",
-            "status": "30 Sun WO",
-            "att_status": "WO",
-            "fulldate": "2022-01-30",
-            "inTime": "",
-            "outTime": "",
-            "Total": ""
-        },
-        {
-            "employeeId": "36",
-            "status": "31 Mon NF",
-            "att_status": "NF",
-            "fulldate": "2022-01-31",
-            "inTime": "",
-            "outTime": "",
-            "Total": ""
         }
-    ],
-    "response": {
+
+        loadCal(month, year);
+
+
+
+      });
+      function GetMonthName(monthNumber) {
+
+        var months = ['January', 'February', 'March', 'April', 'May', 'June',
+
+          'July', 'August', 'September', 'October', 'November', 'December'
+
+        ];
+
+        return months[monthNumber - 1];
+
+      }
+    }
+  </script>
+  <script>
+    response = {
+      "data": [
+        {
+          "employeeId": "36",
+          "status": "01 Sat NF",
+          "att_status": "NF",
+          "fulldate": "2022-01-01",
+          "inTime": "",
+          "outTime": "",
+          "Total": ""
+        },
+        {
+          "employeeId": "36",
+          "status": "02 Sun WO",
+          "att_status": "WO",
+          "fulldate": "2022-01-02",
+          "inTime": "",
+          "outTime": "",
+          "Total": ""
+        },
+        {
+          "employeeId": "36",
+          "status": "03 Mon NF",
+          "att_status": "NF",
+          "fulldate": "2022-01-03",
+          "inTime": "",
+          "outTime": "",
+          "Total": ""
+        },
+        {
+          "employeeId": "36",
+          "status": "04 Tue NF",
+          "att_status": "NF",
+          "fulldate": "2022-01-04",
+          "inTime": "",
+          "outTime": "",
+          "Total": ""
+        },
+        {
+          "employeeId": "36",
+          "status": "05 Wed NF",
+          "att_status": "NF",
+          "fulldate": "2022-01-05",
+          "inTime": "",
+          "outTime": "",
+          "Total": ""
+        },
+        {
+          "employeeId": "36",
+          "status": "06 Thu NF",
+          "att_status": "NF",
+          "fulldate": "2022-01-06",
+          "inTime": "",
+          "outTime": "",
+          "Total": ""
+        },
+        {
+          "employeeId": "36",
+          "status": "07 Fri NF",
+          "att_status": "NF",
+          "fulldate": "2022-01-07",
+          "inTime": "",
+          "outTime": "",
+          "Total": ""
+        },
+        {
+          "employeeId": "36",
+          "status": "08 Sat WO",
+          "att_status": "WO",
+          "fulldate": "2022-01-08",
+          "inTime": "",
+          "outTime": "",
+          "Total": ""
+        },
+        {
+          "employeeId": "36",
+          "status": "09 Sun WO",
+          "att_status": "WO",
+          "fulldate": "2022-01-09",
+          "inTime": "",
+          "outTime": "",
+          "Total": ""
+        },
+        {
+          "employeeId": "36",
+          "status": "10 Mon NF",
+          "att_status": "NF",
+          "fulldate": "2022-01-10",
+          "inTime": "",
+          "outTime": "",
+          "Total": ""
+        },
+        {
+          "employeeId": "36",
+          "status": "11 Tue NF",
+          "att_status": "NF",
+          "fulldate": "2022-01-11",
+          "inTime": "",
+          "outTime": "",
+          "Total": ""
+        },
+        {
+          "employeeId": "36",
+          "status": "12 Wed NF",
+          "att_status": "NF",
+          "fulldate": "2022-01-12",
+          "inTime": "",
+          "outTime": "",
+          "Total": ""
+        },
+        {
+          "employeeId": "36",
+          "status": "13 Thu NF",
+          "att_status": "NF",
+          "fulldate": "2022-01-13",
+          "inTime": "",
+          "outTime": "",
+          "Total": ""
+        },
+        {
+          "employeeId": "36",
+          "status": "14 Fri NF",
+          "att_status": "NF",
+          "fulldate": "2022-01-14",
+          "inTime": "",
+          "outTime": "",
+          "Total": ""
+        },
+        {
+          "employeeId": "36",
+          "status": "15 Sat NF",
+          "att_status": "NF",
+          "fulldate": "2022-01-15",
+          "inTime": "",
+          "outTime": "",
+          "Total": ""
+        },
+        {
+          "employeeId": "36",
+          "status": "16 Sun WO",
+          "att_status": "WO",
+          "fulldate": "2022-01-16",
+          "inTime": "",
+          "outTime": "",
+          "Total": ""
+        },
+        {
+          "employeeId": "36",
+          "status": "17 Mon NF",
+          "att_status": "NF",
+          "fulldate": "2022-01-17",
+          "inTime": "",
+          "outTime": "",
+          "Total": ""
+        },
+        {
+          "employeeId": "36",
+          "status": "18 Tue NF",
+          "att_status": "NF",
+          "fulldate": "2022-01-18",
+          "inTime": "",
+          "outTime": "",
+          "Total": ""
+        },
+        {
+          "employeeId": "36",
+          "status": "19 Wed NF",
+          "att_status": "NF",
+          "fulldate": "2022-01-19",
+          "inTime": "",
+          "outTime": "",
+          "Total": ""
+        },
+        {
+          "employeeId": "36",
+          "status": "20 Thu NF",
+          "att_status": "NF",
+          "fulldate": "2022-01-20",
+          "inTime": "",
+          "outTime": "",
+          "Total": ""
+        },
+        {
+          "employeeId": "36",
+          "status": "21 Fri NF",
+          "att_status": "NF",
+          "fulldate": "2022-01-21",
+          "inTime": "",
+          "outTime": "",
+          "Total": ""
+        },
+        {
+          "employeeId": "36",
+          "status": "22 Sat WO",
+          "att_status": "WO",
+          "fulldate": "2022-01-22",
+          "inTime": "",
+          "outTime": "",
+          "Total": ""
+        },
+        {
+          "employeeId": "36",
+          "status": "23 Sun WO",
+          "att_status": "WO",
+          "fulldate": "2022-01-23",
+          "inTime": "",
+          "outTime": "",
+          "Total": ""
+        },
+        {
+          "employeeId": "36",
+          "status": "24 Mon NF",
+          "att_status": "NF",
+          "fulldate": "2022-01-24",
+          "inTime": "",
+          "outTime": "",
+          "Total": ""
+        },
+        {
+          "employeeId": "36",
+          "status": "25 Tue NF",
+          "att_status": "NF",
+          "fulldate": "2022-01-25",
+          "inTime": "",
+          "outTime": "",
+          "Total": ""
+        },
+        {
+          "employeeId": "36",
+          "status": "26 Wed NF",
+          "att_status": "NF",
+          "fulldate": "2022-01-26",
+          "inTime": "",
+          "outTime": "",
+          "Total": ""
+        },
+        {
+          "employeeId": "36",
+          "status": "27 Thu NF",
+          "att_status": "NF",
+          "fulldate": "2022-01-27",
+          "inTime": "",
+          "outTime": "",
+          "Total": ""
+        },
+        {
+          "employeeId": "36",
+          "status": "28 Fri NF",
+          "att_status": "NF",
+          "fulldate": "2022-01-28",
+          "inTime": "",
+          "outTime": "",
+          "Total": ""
+        },
+        {
+          "employeeId": "36",
+          "status": "29 Sat NF",
+          "att_status": "NF",
+          "fulldate": "2022-01-29",
+          "inTime": "",
+          "outTime": "",
+          "Total": ""
+        },
+        {
+          "employeeId": "36",
+          "status": "30 Sun WO",
+          "att_status": "WO",
+          "fulldate": "2022-01-30",
+          "inTime": "",
+          "outTime": "",
+          "Total": ""
+        },
+        {
+          "employeeId": "36",
+          "status": "31 Mon NF",
+          "att_status": "NF",
+          "fulldate": "2022-01-31",
+          "inTime": "",
+          "outTime": "",
+          "Total": ""
+        }
+      ],
+      "response": {
         "n": 1,
         "msg": "SUCCESS",
         "status": "success"
+      }
     }
-}
 
-var eventdate = [];
-                for (var i = 0; i < response.data.length; i++) {
-                    var tm_color = "#ffffff";
-                    var newtitle = "";
-                    console.log("att_status", response.data[i]['outTime'])
-                    OutTime = response.data[i]['outTime']
-                    InTime = response.data[i]['inTime']
-                    if (response.data[i].att_status == "P") {
-                        tm_color = "#ccffcc";
-                        newtitle = "<b>In :</b>" + response.data[i].inTime + "<br/> <b> Out :</b>" + response.data[i].outTime + "<br/> <b> WH :</b>" + response.data[i].Total;
-                    } else if (response.data[i].att_status == "A") {	
-                        if (OutTime == "-" && InTime != "-") {
-                            tm_color = "#E5E4E2";
-                            newtitle = "<b>In :</b>" + response.data[i].inTime + "<br/> <b> Out :</b>" + response.data[i].outTime + "<br/> <b> WH :</b>" + response.data[i].Total + "<br><button id='approvalRequest'>Request</button>";
+    var eventdate = [];
+    for (var i = 0; i < response.data.length; i++) {
+      var tm_color = "#ffffff";
+      var newtitle = "";
+      console.log("att_status", response.data[i]['outTime'])
+      OutTime = response.data[i]['outTime']
+      InTime = response.data[i]['inTime']
+      if (response.data[i].att_status == "P") {
+        tm_color = "#ccffcc";
+        newtitle = "<b>In :</b>" + response.data[i].inTime + "<br/> <b> Out :</b>" + response.data[i].outTime + "<br/> <b> WH :</b>" + response.data[i].Total;
+      } else if (response.data[i].att_status == "A") {
+        if (OutTime == "-" && InTime != "-") {
+          tm_color = "#E5E4E2";
+          newtitle = "<b>In :</b>" + response.data[i].inTime + "<br/> <b> Out :</b>" + response.data[i].outTime + "<br/> <b> WH :</b>" + response.data[i].Total + "<br><button id='approvalRequest'>Request</button>";
 
-                        } else {
-                            console.log("rrrrrrr")
-                            tm_color = "#ff8566";
-                            newtitle = "<b>In :</b>" + response.data[i].inTime + "<br/> <b> Out :</b>" + response.data[i].outTime + "<br/> <b> WH :</b>" + response.data[i].Total;
-                        }
-                    } else if (response.data[i].att_status == "WO") {
-                        tm_color = "#ffffb3";
-                        newtitle = "";
-                    } else if (response.data[i].att_status == "H") {
-                        tm_color = "#b3d1ff";
-                        newtitle = "";
-                    }
+        } else {
+          console.log("rrrrrrr")
+          tm_color = "#ff8566";
+          newtitle = "<b>In :</b>" + response.data[i].inTime + "<br/> <b> Out :</b>" + response.data[i].outTime + "<br/> <b> WH :</b>" + response.data[i].Total;
+        }
+      } else if (response.data[i].att_status == "WO") {
+        tm_color = "#ffffb3";
+        newtitle = "";
+      } else if (response.data[i].att_status == "H") {
+        tm_color = "#b3d1ff";
+        newtitle = "";
+      }
 
-                    eventdate.push({
-                        start: response.data[i].fulldate,
-                        allDay: true,
-                        rendering: 'background',
-                        backgroundColor: tm_color,
-                        title: newtitle,
-                        textColor: '#000000',
-                        className: 'event-full',
-                        borderColor: 'red',
-                    })
-                }
-                console.log("hiii", eventdate)
-                console.log("aa", sdate)
-                // $('#calendar').fullCalendar('destroy');
+      eventdate.push({
+        start: response.data[i].fulldate,
+        allDay: true,
+        rendering: 'background',
+        backgroundColor: tm_color,
+        title: newtitle,
+        textColor: '#000000',
+        className: 'event-full',
+        borderColor: 'red',
+      })
+    }
+    console.log("hiii", eventdate)
+    console.log("aa", sdate)
+    // $('#calendar').fullCalendar('destroy');
 
-                $('#calendar').fullCalendar({
-                    themeSystem: 'jquery-ui',
+    $('#calendar').fullCalendar({
+      themeSystem: 'jquery-ui',
 
-                    header: {
-                        left: 'EventButton',
-                        center: '',
-                        right: ''
-                    },
-                    defaultView: 'month',
-                    defaultDate: sdate,
-                    events: eventdate,
-                    editable: true,
-                    selectable: true,
+      header: {
+        left: 'EventButton',
+        center: '',
+        right: ''
+      },
+      defaultView: 'month',
+      defaultDate: sdate,
+      events: eventdate,
+      editable: true,
+      selectable: true,
 
-                    // customButtons: {
-                    //     EventButton: {
-                    //         text: 'Add Event',
-                    //         click: function(event, jsEvent, view) {
-                    //             $('#modal_calendar').modal('show');
-                    //         }
-                    //     }
-                    // },
+      // customButtons: {
+      //     EventButton: {
+      //         text: 'Add Event',
+      //         click: function(event, jsEvent, view) {
+      //             $('#modal_calendar').modal('show');
+      //         }
+      //     }
+      // },
 
-                    select: function(start, end) {
+      select: function (start, end) {
 
-                    },
-                    eventAfterRender: function(event, element, view) {
+      },
+      eventAfterRender: function (event, element, view) {
 
-                        element.html(event.title);
-                        $('.fc-other-month').html('');
-                        // var new_description = '<button onclick="approvelRequest();">Request1</button>'
-                        // element.append(new_description);
+        element.html(event.title);
+        $('.fc-other-month').html('');
+        // var new_description = '<button onclick="approvelRequest();">Request1</button>'
+        // element.append(new_description);
 
-                    },
-                    dayClick: function(date, jsEvent, view) {
-                        d1 = date.format()
-                        approvelRequest(d1)
-                    }
+      },
+      dayClick: function (date, jsEvent, view) {
+        d1 = date.format()
+        approvelRequest(d1)
+      }
 
-                });
-    </script>
+    });
+  </script>
 
 
-  </body>
+</body>
+
 </html>

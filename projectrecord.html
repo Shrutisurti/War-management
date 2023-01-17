@@ -336,12 +336,12 @@
                       <div class="d-flex justify-content-end">
                         <button
                           class="excel-file"
-                          onclick="$('#projectrecordtable').DataTable().buttons(0).trigger()"
+                          onclick="$('#projectrecordtable1').DataTable().buttons(0).trigger()"
                         >
                           Export <i class="fa-solid fa-file-excel"></i>
                         </button>
                       </div>
-                      <table id="projectrecordtable" class="table tab-table">
+                      <table id="projectrecordtable1" class="table tab-table">
                         <thead>
                           <tr>
                             <th>Start Date</th>
@@ -380,12 +380,12 @@
                       <div class="d-flex justify-content-end">
                         <button
                           class="excel-file"
-                          onclick="$('#projectrecordtable').DataTable().buttons(0).trigger()"
+                          onclick="$('#projectrecordtable2').DataTable().buttons(0).trigger()"
                         >
                           Export <i class="fa-solid fa-file-excel"></i>
                         </button>
                       </div>
-                      <table id="projectrecordtable" class="table tab-table">
+                      <table id="projectrecordtable2" class="table tab-table">
                         <thead>
                           <tr>
                             <th>Start Date</th>
@@ -429,7 +429,6 @@
     <script>
       var acc = document.getElementsByClassName("employeeaccordion");
       var i;
-
       for (i = 0; i < acc.length; i++) {
         acc[i].addEventListener("click", function () {
           this.classList.toggle("active");
@@ -455,5 +454,31 @@
         },
       });
     </script>
+     <script>
+      dataTable = $("#projectrecordtable1").DataTable({
+        dom: "Bfrtip",
+        buttons: ["excel"],
+        language: {
+          paginate: {
+            next: '<i class="fa-solid fa-forward "></i>',
+            previous: '<i class="fa-solid fa-backward"></i>',
+          },
+          info: " _START_ - _END_ out of _TOTAL_ items",
+        },
+      });
+    </script>
+         <script>
+          dataTable = $("#projectrecordtable2").DataTable({
+            dom: "Bfrtip",
+            buttons: ["excel"],
+            language: {
+              paginate: {
+                next: '<i class="fa-solid fa-forward "></i>',
+                previous: '<i class="fa-solid fa-backward"></i>',
+              },
+              info: " _START_ - _END_ out of _TOTAL_ items",
+            },
+          });
+        </script>
   </body>
 </html>

@@ -1659,23 +1659,24 @@ td{
   outline: none;
 }
 
-.form-select{
+.modal-form-select{
   background-color: transparent;
   border: none;
   border-bottom: 1px solid var(--fc-dark);
   border-radius: 0;
   height: 50px;
-  color: var(--fc-md-dark);
+  /* color: var(--fc-md-dark); */
+  padding: 0px;
 }
 
-.form-select:focus-visible, .form-select:focus{
+.modal-form-select:focus-visible, .modal-form-select:focus{
   border: none;
   outline: none;
   box-shadow: none;
   border-bottom: 1px solid var(--fc-dark);
 }
 
-.form-select option:nth-child(1){
+.modal-form-select option:nth-child(1){
   color: var(--fc-md-dark);
 }
 
@@ -1717,7 +1718,7 @@ td{
 
 .modal-body input{
   font-size: var(--f-lg);
-  color: var(--fc-md-dark);
+  /* color: var(--fc-md-dark); */
   width: 100%;
   border: none;
   border-bottom: 1px solid rgb(214, 214, 214);
@@ -1903,7 +1904,7 @@ td{
   color: var(--fc-dark);
 }
 
-/* Manger Task Page */
+/*-------------------------------------------Manger Task Page--------------------------------------*/
 
 /* Modal Style */
 .add-btn {
@@ -1912,6 +1913,9 @@ td{
   border-radius: 20px;
   padding: 10px 30px;
   float: right;
+}
+.add-btn:hover{
+  color: #fff;
 }
 .modal-header h5 {
   font-size: 18px;
@@ -2050,11 +2054,48 @@ background-color: #fff;
 .modal-body input{
   border-bottom: 1px solid #000;
 }
+.manage-task-delete-btn{
+  background: none;
+  border: none;
+  padding: 0px;
+  color: red;
+}
+.modal-edit-btn{
+ color: #00b0ef;
+ border: none;
+ background: none;
+ padding: 0px;
+}
+.modal-header{
+  padding: 10px 0px;
+}
+ a:hover{
+  color: #00b0ef;
+  text-decoration: none;
+}
+.modal-content{
+  padding: 20px;
+}
+.manage-dropdown-menu{
+  /* transform: translate(-120px, 30px) !important; */
+  --bs-dropdown-min-width: 1rem;
+  transform: translate(-45px, 26px) !important;
+}
+ /* .dropdown-item:hover {
+  color: var(--bs-dropdown-link-hover-color);
+  background-color: #00b0ef;
+ 
+} */
+.manage-dropdown-menu:focus{
+  color: #fff !important;
+  background-color: #00b0ef !important;
+}
+
 /* .year-week{
   margin-left: 6rem;
 } */
 
-/* Task War Report */
+/* --------------------------Task War Report-----------------------------------*/
 
 .task-report-box{
   padding: 20px;
@@ -2191,7 +2232,7 @@ table td{
 }
 .task-report-selector .form-select{
   border: 1px solid gray;
-  height: 33px;
+  height: 35px;
   border-radius: 5px;
 }
 .task-report-selector label{
@@ -2252,14 +2293,14 @@ table td{
   border-style: none;
   border-width: 0;
 }
-.form-select{
+/* .form-select{
   background-color: transparent;
   border: 1px solid rgb(206, 212, 218);
   
   border-radius: 5px;
-  height: 30px;
+  height: 35px;
   color: var(--fc-md-dark);
-}
+} */
 .table.dataTable thead>tr>th.sorting:after, table.dataTable thead>tr>th.sorting_asc:after, table.dataTable thead>tr>th.sorting_desc:after, table.dataTable thead>tr>th.sorting_asc_disabled:after, table.dataTable thead>tr>th.sorting_desc_disabled:after, table.dataTable thead>tr>td.sorting:after, table.dataTable thead>tr>td.sorting_asc:after, table.dataTable thead>tr>td.sorting_desc:after, table.dataTable thead>tr>td.sorting_asc_disabled:after, table.dataTable thead>tr>td.sorting_desc_disabled:after {
   top: 50%;
   content: "▼";
