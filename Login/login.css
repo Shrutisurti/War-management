@@ -1,0 +1,139 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap'); */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  font-family: "Rubik", sans-serif;
+  margin: 20px;
+}
+
+.content {
+  text-align: center;
+}
+
+.content p {
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: 20px;
+}
+
+.form-div {
+  background: #fff;
+  box-shadow: 0px 15px 30px rgb(0 175 239 / 28%);
+  padding: 70px 40px;
+  width: 80%;
+  margin: 0 auto;
+  border-radius: 20px;
+}
+
+.form-div img {
+  width: 40%;
+  margin: 0;
+}
+
+.form-div h3 {
+  font-size: 30px;
+  font-weight: 400;
+  text-transform: capitalize;
+  margin: 0;
+  margin-top: 30px;
+}
+
+.form-div p {
+  font-size: 22px;
+  margin: 0;
+  font-weight: 800;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.form-div a {
+  font-size: 14px;
+  margin: 0;
+  font-weight: 400;
+  margin-bottom: 30px;
+  text-decoration: none;
+  color: #00afef;
+}
+
+.login-btn {
+  width: 100%;
+  /* margin-top: 20px; */
+  background: transparent;
+  border: 2px solid #00b0ef;
+  color: #00b0ef;
+  font-size: 18px;
+  transition: 0.5s all;
+  padding: 5px 0;
+  border-radius: 2rem;
+}
+
+.login-btn:hover {
+  background: #00b0ef;
+  border: 2px solid #00b0ef;
+}
+.back-btn{
+  background:#00b0ef;
+  color: #fff;
+  border: 2px solid #00b0ef;
+}
+.back-btn:hover{
+  background: #fff;
+  border: 2px solid #000;
+  color: #000;
+}
+input {
+  border: 0 !important;
+  background: transparent !important;
+  border-radius: 0 !important;
+  border-bottom: 1px solid #00b0ef !important;
+  font-size: 16px !important;
+  padding-left: 3px !important;
+  padding-top: 30px !important;
+}
+
+input:focus {
+  outline: 0 !important;
+  box-shadow: 0 0 0 #0000 !important;
+}
+
+.see-password {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  color: #222;
+}
+
+.form-floating label {
+  padding-left: 0;
+}
+
+/* Media query */
+@media (max-width: 767px) {
+  .content {
+    margin: 20px;
+  }
+  .content img {
+    width: 100% !important;
+  }
+  .form-div {
+    padding: 45px 25px;
+    width: 100%;
+  }
+  .form-div p {
+    font-size: 35px;
+    margin-bottom: 0;
+  }
+
+  .form-div h3 {
+    font-size: 35px;
+    margin-top: 30px;
+  }
+}
+
